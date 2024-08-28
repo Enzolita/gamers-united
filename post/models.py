@@ -24,9 +24,9 @@ class UserProfile(models.Model):
         max_length=150, default="Currently no bio", blank=True
         )
     username = models.CharField(max_length=15, default="User")
-    first_name = models.CharField(max_length=15, default="Usef")
-    last_name = models.CharField(max_length=15, default="Usefsson")
-    email = models.EmailField(max_length=40, default="User@game-insight.com")
+    first_name = models.CharField(max_length=15, default="Name")
+    last_name = models.CharField(max_length=15, default="Lastname")
+    email = models.EmailField(max_length=40, default="User@gamers-united.com")
     profile_picture = CloudinaryField(
         'image',
         default=("https://res.cloudinary.com/dpwnz6ieo/image/upload/"
@@ -35,7 +35,7 @@ class UserProfile(models.Model):
         blank=True,
     )
     country = models.CharField(
-        max_length=30, default="Citizen of the Cyber world", blank=True
+        max_length=30, default="Digital Citizen", blank=True
     )
 
     @receiver(post_save, sender=User)
