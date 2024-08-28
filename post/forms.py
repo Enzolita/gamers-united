@@ -2,17 +2,11 @@ from django import forms
 from .models import Post, Comment, UserProfile, GameCategory
 
 
-class PostForm(forms.Modelform):
-    """ Form to create a post """
-    class Meta:
-        model = Post
-        fields = 'title', 'content', 
-
-
-        class CommentForm(forms.ModelForm):
+class CommentForm(forms.ModelForm):
     """
     Comment form in blog posts
     """
+
     class Meta:
         model = Comment
         fields = ("body",)
