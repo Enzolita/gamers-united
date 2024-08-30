@@ -417,3 +417,46 @@ Here are some exciting enhancements we plan to introduce to **Gamers United**:
 <p align="center">
   
 </p>
+
+# Testing
+
+---
+
+All testing, including both manual and automated testing, was carried out and documented in [Testing.md](TESTING.md). 
+
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  <img src="docs/readme.md/readme-divider3.png" />
+</p>
+
+# Bugs
+--
+
+### Known bugs
+
+| **Bug** | **Description** |
+| ------- | --------------- |
+| [-](http) | ---- |
+| [-](http) | ---- |
+| [-](https) | ----- |
+| [-](http) | ---- |
+| [-](http) | ---- |
+
+
+
+### Fixed bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+| [-](http) | --- |
+| [-](http) | --- |
+| [-](http) | --- |
+| [-](http) | --- |
+| [-](http) | --- |
+| [-](http) | --- | -- |
+
+
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
