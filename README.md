@@ -136,3 +136,104 @@ The user stories and epics are organized into four distinct sprints (milestones)
 <p align="center">
   
 </p>
+
+# Database
+When creating the database structure schema for this project, I utilized the [lucidchart.com](https://lucidchart.com/) website. This online tool allowed me to visually design and document the database schema, making it easier to plan and implement the database for the blog application.
+
+<center> 
+
+![Database Schema image](docs/readme_images/database-schema.png) 
+
+</center>
+
+### Blog Application Database Schema
+
+#### GameCategory Table
+- Stores game categories used for categorizing posts.
+- Fields: gamecategory_id (primary key), name (category name), device (category device).
+
+#### UserProfile Table
+- Extends the User model to store additional user-specific information.
+- Fields: userprofile_id (primary key), user (one-to-one relationship with the User model), first_name, last_name, profile_picture (user profile picture), bio (user bio), country (user's country).
+
+#### User Table
+- Represents user information. ( Django built In )
+- Fields: user_id (primary key), username (user's name), email (user's email address), password (user's password).
+
+#### Post Table
+- Represents blog posts created by users.
+- Fields: post_id (primary key), title (post title), slug (post slug), author_id (foreign key to User), update_on (post update date), content (post content), featured_image (featured image URL), excerpt (post excerpt), Created_on (post creation date), status (post status), likes (many-to-many relationship with User for post likes), category_id (foreign key to GameCategory), device (post device 'PC', 'XBOX', 'PLAYSTATION', 'NITENDO', Charfield).
+
+#### Comment Table
+- Represents comments on blog posts.
+- Fields: comment_id (primary key), post_id (foreign key to Post), name (commenter's name), email (commenter's email address), body (comment content), created_on (comment creation date), approved (comment approval status), user_id (foreign key to user model).
+
+<br>
+This database schema defines the structure and relationships for a blog application, including users, posts, comments, user profiles, game categories, and follower relationships.
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
+
+# Design
+In the world of **Gamers United**, the design philosophy revolves around creating a modern and streamlined user interface that highlights gaming insights. Drawing inspiration from the immersive environments of video games, the aim is to offer a visually engaging experience. The primary objective is to ensure effortless navigation, discovery, and interaction with a rich array of gaming articles.
+
+### Design Choices
+Our design choices were thoughtfully made with gamers at the forefront, resulting in an environment that authentically reflects the spirit of the gaming community.
+
+### Color
+The goal with the colors are to make it a cozy environment with a gradient background that includes different shades.
+
+![Color Palette image](--)
+
+
+
+### Fonts
+
+**Gamers United** utilizes the default fonts provided by Bootstrap 5, which enhance both the visual appeal and user experience of the site without additional customization.
+
+### Structure
+
+The website is designed with a user-friendly structure to ensure smooth navigation and easy access to content. Here's a summary of the site layout:
+
+#### Before Logging In:
+
+- **Landing Page:** The landing page introduces visitors to **Gamers United**, showcasing the platform and highlighting the engaging content and features available.<br>
+- **About Us:** The About Us page offers insight into **Gamers United**, including our mission, values, and the advantages of being part of our active gaming community.<br>
+- **Sign Up:** New users can quickly create an account on the Join Us page by providing the necessary information to join **Gamers United**.<br>
+- **Log In:** Existing users can access their accounts and explore the full range of features by logging in through this page.<br>
+
+
+#### After Logging In:
+
+Once you're logged into **Gamers United**, you'll be immersed in our vibrant gaming community with access to the following pages:
+
+- **Home Page (Gamer's Hub):** This is your gateway to the latest gaming blog posts. The Gamer's Hub serves as a central hub, offering a rich array of gaming articles and content.<br>
+- **Profile Page:** Here, you can manage your gaming identity. Display your bio, showcase your achievements, and personalize your avatar. Tailor your profile settings to reflect your unique gaming persona.<br>
+- **Contact Us:** Should you have any questions or encounter issues, our support team is ready to help. Reach out via the "Contact Us" page for assistance with any concerns or inquiries.<br>
+
+We’ve designed this space to be your premier gaming hub, where you can engage, explore, and exchange insights with other gaming enthusiasts.
+
+#### Profile Navigation:
+
+Clicking on your profile image in the navigation bar gives you access to various profile-specific features:
+
+- **My Articles:** The "My articles" page is your personal dashboard. Here, you can view and manage the articles and contributions you've made to **Gamers United**.<br>
+- **Create Post:** Eager to share your gaming knowledge? The "Create Post" page lets you draft and publish your own articles, contributing your unique insights and experiences to the community. Showcase the tips and tricks you've discovered in your favorite games!<br>
+- **Log Out:** When you're ready to end your session, click "Log Out" to securely exit and transition back to reality after your immersive gaming journey.<br>
+
+### Wireframes
+
+
+
+<details><summary>Create Post View</summary>
+<img src="docs/wireframes/wireframe.png">
+</details>
+<details><summary>Phone View</summary>
+<img src="docs/wireframes/phone wireframe.png">
+</details>
+
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
