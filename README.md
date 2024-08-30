@@ -613,3 +613,59 @@ To clone the repository, follow these steps:
   
 </p>
 
+# Credits
+I would like to express my gratitude to the following resources, which have been a huge help to me in the development of the Gamer Insight - Blog.
+
+### Media
+Images are taken from the following page:
+- [-](https://leonardo.ai/) **-**
+
+
+### Django Documentation:
+The official Django documentation has been an invaluable resource throughout the project, providing comprehensive guidance on models, forms, templates, and various aspects of Django development.
+
+- [Models](https://docs.djangoproject.com/en/4.2/topics/db/models/)
+- [Form Validation](https://docs.djangoproject.com/en/4.1/ref/forms/validation/)
+- [Model Field Types](https://docs.djangoproject.com/en/4.2/ref/models/fields/#model-field-types)
+- [CSRF Trusted Origins](https://docs.djangoproject.com/en/4.0/ref/settings/#csrf-trusted-origins)
+- [Built-in template tags and filters](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/)
+- [Creating forms from models](https://docs.djangoproject.com/en/4.2/topics/forms/modelforms/)
+- [Model instance reference](https://docs.djangoproject.com/en/4.2/ref/models/instances/)
+- [Signals](https://docs.djangoproject.com/en/4.2/topics/signals/)
+- [Using mixins with class-based views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/mixins/#detailview-working-with-a-single-django-object)
+- [Using widgets in the form](https://docs.djangoproject.com/en/4.2/ref/forms/widgets/)
+-
+
+### W3 Schools:
+- [-]()
+
+### Bootstrap docs:
+- [Increase knowledge of bootstrap framework](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+### Geeksforgeeks: 
+- [Using crisp form](https://www.geeksforgeeks.org/styling-django-forms-with-django-crispy-forms/)
+
+### Various tutorials and YouTube channels:
+I would like to extend my appreciation to the authors of the tutorials and YouTube channels that have shared their knowledge and expertise in Django development, enabling me to learn and apply best practices in building Gamers United.
+- [Python Django Tutorial: Full-Featured Web App Part 1 - Getting Started](https://www.youtube.com/watch?v=UmljXZIypDchttps://www.youtube.com/watch?v=UmljXZIypDc)
+- [Python and Django - Django Blog ](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+- [Django Recipe Sharing Tutorial ](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=1)
+
+### Content
+
+- Paragraphs/text for the webpage/readme was written together with [ChatGPT](https://chat.openai.com/)
+
+
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
+
+# Acknowledgments
+I'd like to give recognition to the individuals who supported me with this project:
+
+* [Jubril](https://github.com/), my Code Institute Mentor, for his exceptional guidance and expertise, which greatly contributed to my growth as a developer.
+
+[Code Institute Slack Channel:](https://codeinstitute.net/) Where all the amazing people are very supportive and helpful.
+
+I am truly grateful for their contributions, which have greatly enriched my learning and development.
