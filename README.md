@@ -28,7 +28,7 @@ Developer: [Elena Hanna](https://github.com/KimBergstroem) <br>
 ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
 ![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
 ![JSS Badge](https://img.shields.io/badge/JSS-F7DF1E?logo=jss&logoColor=000&style=for-the-badge)
-![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)
+![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)docs/wireframes/phone wireframe.png
 ![Markdown Badge](https://img.shields.io/badge/Markdown-000?logo=markdown&logoColor=fff&style=for-the-badge)
 
 ![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff&style=for-the-badge)
@@ -420,16 +420,16 @@ For a comprehensive view of the project's trajectory, user stories, and bug trac
 - Visitors can easily navigate to different sections available for unauthorized users of the website through the navigation bar. Visitors can also access our social media through the footer section.<details><summary>See Screenshot **Navbar**</summary><img src="docs/features/navbar.png"></details><details><summary>See Screenshot **Footer**</summary><img src="docs/features/footer.png"></details>
 
 ### Blog Pages:
-- When the user has logged in they will be directed to the Blog main page where they can scroll through blog article cards. <details><summary>See Screenshot **Main**</summary><img src="docs/features/features-blog-page.png"></details>
+- When the user has logged in they will be directed to the Blog main page where they can scroll through blog article cards. <details><summary>See Screenshot **Main**</summary><img src=""></details>
 
 ### Blog Detail Page:
-- The blog details page displays comprehensive information about each article, including details about the writer and the article's creation date.<details><summary>See Screenshot **Post detail**</summary><img src="docs/features/features-blog-detail-page.png"></details>
+- The blog details page displays comprehensive information about each article, including details about the writer and the article's creation date.<details><summary>See Screenshot **Post detail**</summary><img src=""></details>
 
-- Authors of posts have the privilege to edit or delete their content, ensuring they have control over their contributions.<details><summary>See Screenshot **Editing**</summary><img src="docs/features/features-blog-post-edit.png"></details><details><summary>See Screenshot **Delete**</summary><img src="docs/features/features-blog-post-delete.png"></details>
+- Authors of posts have the privilege to edit or delete their content, ensuring they have control over their contributions.<details><summary>See Screenshot **Editing**</summary><img src=""></details><details><summary>See Screenshot **Delete**</summary><img src=""></details>
 
-- Users can express their appreciation for a well-written blog post by liking it, which not only supports the author but also recognizes the quality of the content.<details><summary>See Screenshot **Like**</summary><img src="docs/features/features-blog-editing.png"></details>
+- Users can express their appreciation for a well-written blog post by liking it, which not only supports the author but also recognizes the quality of the content.<details><summary>See Screenshot **Like**</summary><img src=""></details>
 
-- Users can actively participate in the community by leaving comments on recipes. This provides a platform for sharing thoughts, suggestions, and feedback, fostering a vibrant and engaging community. Users also have the option to delete comments.<details><summary>See Screenshot **Comment**</summary><img src="docs/features/features-comment.png"></details>
+- Users can actively participate in the community by leaving comments on recipes. This provides a platform for sharing thoughts, suggestions, and feedback, fostering a vibrant and engaging community. Users also have the option to delete comments.<details><summary>See Screenshot **Comment**</summary><img src=""></details>
 
 ### User Account Management:
 - The account sign-up form allows new users to create an account and join the Gamers United community. The form has validation to make sure that the user enters the correct information needed. This is a Django built-in validation system. Such validation is:
@@ -441,27 +441,27 @@ For a comprehensive view of the project's trajectory, user stories, and bug trac
         - Must contain at least 8 characters.
         - Cannot be a commonly used password.
         - Cannot be entirely numeric.
-    - See Screenshot<details><summary>**SIGNUP VALIDATION**</summary><img src="docs/features/features-blog-form-valid.png"></details>
+    - See Screenshot<details><summary>**SIGNUP VALIDATION**</summary><img src=""></details>
 
 - The login form ensures secure access to Gamers United by verifying your username and password. If you face login issues, use the 'Forgot Password?' link to reset your password. The form also displays validation error messages to guide you through any input errors.
     - See Screenshot<details><summary>**LOGIN VALIDATION**</summary><img src="docs/features/sign-in.png"></details>
 
 
-- When an account is successfully created, the user will receive a confirmation message and gain access to the profile menu.<details><summary>See Screenshot **Success**</summary><img src="docs/features/features-loggedin-user.png"></details>
+- When an account is successfully created, the user will receive a confirmation message and gain access to the profile menu.<details><summary>See Screenshot **Success**</summary><img src=""></details>
 
 - Users can create posts.<details><summary>See Screenshot **Create Post**</summary><img src="docs/features/add-post.png"></details>
 
-- Users can access their profile page, where they can edit, delete, or change their password.<details><summary>See Screenshot **My Profile**</summary><img src="docs/features/features-profile.png"></details><details><summary>See Screenshot **Update Profile**</summary><img src="docs/features/features-update-profile.png"></details><details><summary>See Screenshot **Change Password**</summary><img src="docs/features/features-change-password.png"></details><details><summary>See Screenshot **Delete Account**</summary><img src="docs/features/features-delete-account.png"></details>
+- Users can access their profile page, where they can edit, delete, or change their password.<details><summary>See Screenshot **My Profile**</summary><img src=""></details><details><summary>See Screenshot **Update Profile**</summary><img src=""></details><details><summary>See Screenshot **Change Password**</summary><img src=""></details><details><summary>See Screenshot **Delete Account**</summary><img src=""></details>
 
-- Users can view all their articles on a single page. This page will also display all user's Liked articles. If there is no post created or liked, that will be displayed.<details><summary>See Screenshot **My Articles**</summary><img src="docs/features/features-my-articles.png"></details><details><summary>See Screenshot **None Articles/Likes**</summary><img src="docs/features/features-my-articles-none.png"></details>
+- Users can view all their articles on a single page. This page will also display all user's Liked articles. If there is no post created or liked, that will be displayed.<details><summary>See Screenshot **My Articles**</summary><img src=""></details><details><summary>See Screenshot **None Articles/Likes**</summary><img src=""></details>
 
-- Users can also use the "Logout" option to sign out of their accounts. Upon doing so, they will be directed to a confirmation page where they can confirm the logout.<details><summary>See Screenshot **Logout**</summary><img src="docs/features/features-logout.png"></details>
+- Users can also use the "Logout" option to sign out of their accounts. Upon doing so, they will be directed to a confirmation page where they can confirm the logout.<details><summary>See Screenshot **Logout**</summary><img src=""></details>
 
 
 ### Navigation:
-- The navigation bar provides convenient access to various sections and pages of Gamers United, dynamically adjusting its options based on the user's authorization status. Authorized users also have the ability to submit queries to Gamers United using the Contact Us form. Users will have a confirmation message when successfully submit the form.<details><summary>See Screenshot **Contact Us**</summary><img src="docs/features/features-contactus.png"></details><details><summary>See Screenshot **Contact Us Submitted**</summary><img src="docs/features/features-contact-success.png"></details>
+- The navigation bar provides convenient access to various sections and pages of Gamers United, dynamically adjusting its options based on the user's authorization status. Authorized users also have the ability to submit queries to Gamers United using the Contact Us form. Users will have a confirmation message when successfully submit the form.<details><summary>See Screenshot **Contact Us**</summary><img src=""></details><details><summary>See Screenshot **Contact Us Submitted**</summary><img src=""></details>
 
-- Both unauthorized and authorized users have access to the About Us page. However, depending on whether you are logged in or not, the call-to-action button displayed varies between "Log In" and "Create Post."<details><summary>See Screenshot **About Us Authorized**</summary><img src="docs/features/features-about-unauth.png"></details><details><summary>See Screenshot **About Us Unauthorized**</summary><img src="docs/features/features-about-auth.png"></details>
+- Both unauthorized and authorized users have access to the About Us page. However, depending on whether you are logged in or not, the call-to-action button displayed varies between "Log In" and "Create Post."<details><summary>See Screenshot **About Us Authorized**</summary><img src=""></details><details><summary>See Screenshot **About Us Unauthorized**</summary><img src=""></details>
 
 - On smaller screens, the navigation bar collapses into a burger menu, allowing for a compact and mobile-friendly navigation experience. Users can access the menu by clicking on the burger icon, which reveals the navigation options in a dropdown fashion.
 
@@ -499,7 +499,7 @@ All testing, including both manual and automated testing, was carried out and do
 
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
 <p align="center">
-  <img src="docs/readme.md/readme-divider3.png" />
+
 </p>
 
 # Bugs
@@ -687,11 +687,11 @@ To clone the repository, follow these steps:
 </p>
 
 # Credits
-I would like to express my gratitude to the following resources, which have been a huge help to me in the development of the Gamer Insight - Blog.
+I would like to express my gratitude to the following resources, which have been a huge help to me in the development of the Gamers United - Blog.
 
 ### Media
 Images are taken from the following page:
-- [-](https://leonardo.ai/) **-**
+- [Leonardo.ai](https://leonardo.ai/) **-**
 
 
 ### Django Documentation:
