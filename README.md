@@ -460,3 +460,156 @@ All testing, including both manual and automated testing, was carried out and do
 <p align="center">
   
 </p>
+
+# Deployment
+
+### App Deployment
+For deploying Your app, Heroku is used. Follow these steps:
+
+ **Create a New App:**
+   - Create a new app on Heroku dashboard.
+
+ **Configure Settings:**
+   - Navigate to "Settings" in new app.
+
+ **Config Vars Setup:**
+   - In "Config Vars," add `PORT` as the key and `8000` as its value.
+
+ **Add PostgreSQL Database:**
+   - Choose PostgreSQL as database.
+
+        Example "ElephantSQL" was used in this project
+
+ **Configure DATABASE_URL:**
+   - In "Config Vars," add `DATABASE_URL` and copy the URL from PostgreSQL dashboard.
+
+     Note: If using ElephantSQL as PostgreSQL provider, you can use the URL provided by ElephantSQL.
+
+ **Environment Variable Setup:**
+   - Create a new file in workspace called `env.py`.
+   - Import the `os` library and set the environment variable for `DATABASE_URL` to the Heroku address (or ElephantSQL URL)
+   - Add a secret key using `os.environ["SECRET_KEY"] = "your secret key here"`.
+
+ **Heroku Config Vars:**
+   - Add the secret key to the Heroku app's config vars in the settings.
+
+ **Django Settings:**
+   - In `settings.py` of Django app, import `Path` from `pathlib`, `os`, and `dj_database_url`.
+   - Add `if os.path.isfile("env.py"): import env` to the file.
+   - Replace the SECRET_KEY with `SECRET_KEY = os.environ.get('SECRET_KEY')`.
+   - Replace the database section with `DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}`.
+
+ **Migrate Models:**
+   - In workspace terminal, migrate the models to the new database connection.
+
+### Cloudinary
+To integrate Cloudinary into project, follow these steps:
+
+ **Cloudinary Account:**
+   - Log in to Cloudinary account or create one.
+
+ **Copy CLOUDINARY_URL:**
+   - Copy `CLOUDINARY_URL`.
+
+ **Environment Variable Setup:**
+   - In `env.py`, add `os.environ["CLOUDINARY_URL"] = "add cloudinary_url here"`.
+
+ **Heroku Config Vars:**
+   - In Heroku settings, add `CLOUDINARY_URL` to config vars.
+
+ **Django Settings:**
+   - In `INSTALLED_APPS`, add `cloudinary_storage`, `Django.contrib.staticfiles`, and `cloudinary` in this order.
+   - Configure static file settings in `settings.py`: URL, storage path, directory path, root path, media URL, and default file storage.
+
+ **Templates Directory Link:**
+   - Link the file to the templates directory in Heroku with `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`.
+
+ **Change Templates Directory:**
+   - Change the templates directory to `TEMPLATES_DIR - 'DIRS': [TEMPLATES_DIR]`.
+
+ **Additional Folders:**
+   - Create three new folders: `media`, `static`, and `templates`.
+
+ **Procfile Creation:**
+   - Create a `Procfile`.
+   - Add the following line inside the Procfile: `web: gunicorn project_name_here.wsgi`.
+
+ **Push Changes:**
+    - Push all changes to GitHub.
+
+ **Manual Deployment:**
+    - In the Heroku deployment tab, deploy to Heroku manually the first time and closely monitor the process.
+    - Once successful, set up automatic deployments.
+
+### Version Control
+To manage version control and push code to the main repository on GitHub using GitPod, follow these steps:
+
+ **Add Changes:**
+   - In the GitPod terminal, use the command `git add .` to stage changes.
+
+ **Commit Changes:**
+   - Commit changes with a descriptive comment using the command:
+     ```
+     git commit -m "Push comment here"
+     ```
+
+ **Push to GitHub:**
+   - Push the updates to the repository on GitHub with the command:
+     ```
+     git push
+     ```
+
+
+ **Migrate Models:**
+    - In the terminal, migrate the models to the new database connection.
+
+### Forking the Repository:
+
+By forking the GitHub Repository, can create a copy of the original repository without affecting the original. Follow these steps:
+
+ **GitHub Account Setup:**
+   - Log into GitHub account or create one if you don't have one.
+
+ **Locate the Repository:**
+   - Find the repository at [https://github.com/Enzolita/gamers-united](https://github.com/Enzolita/gamers-united).
+
+ **Fork the Repository:**
+   - At the top right of the repository page, click "Fork" to create a copy in your own GitHub repository.
+
+### Clone of the Repository:
+
+Creating a clone allows you to have a local copy of the project. Follow these steps:
+
+ **Repository URL:**
+   - Navigate to [https://github.com/Enzolita/gamers-united](https://github.com/Enzolita/gamers-united).
+   - Click the green "Code" button at the top right.
+
+ **Clone the Repository:**
+   - Select the "Clone by HTTPS" option and copy the provided URL to the clipboard.
+
+ **Terminal and Git:**
+   - Open your code editor or terminal and navigate to the directory where you want to clone the repository.
+   - Run `git clone` followed by the copied URL.
+   - Press enter, and Git will clone the repository to your local machine.
+
+
+To fork the repository, follow these steps:
+
+1. Go to the GitHub repository.
+2. Click on the Fork button in the upper right-hand corner.
+3. Wait for the forking process to complete. Once done, you will have a copy of the repository in your GitHub account.
+
+To clone the repository, follow these steps:
+
+1. Go to the GitHub repository.
+2. Locate the Code button above the list of files and click it.
+3. Select your preferred method for cloning: HTTPS, SSH, or GitHub CLI, and click the copy button to copy the repository URL to your clipboard.
+4. Open Git Bash (or your preferred terminal).
+5. Change the current working directory to the location where you want the cloned directory to be created.
+6. Type the command `git clone` followed by the URL you copied in step 3. The command should look like this: `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`.
+7. Press Enter to create your local clone.
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
+
