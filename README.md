@@ -237,3 +237,72 @@ Clicking on your profile image in the navigation bar gives you access to various
 <p align="center">
   
 </p>
+
+# Technologies Used
+
+### Languages
+- HTML
+- CSS
+- Python
+
+### Frameworks
+- Django: A high-level Python web framework used for building the Gamers United Blog web application.
+- Crispy Forms: A Django package used for rendering forms in a more efficient and customizable way.
+- Bootstrap v5.3: A popular CSS framework used for creating responsive and visually appealing user interfaces.
+- Cloudinary: A cloud-based media management platform used for storing and serving images in the Blog Collective project.
+
+### Database
+- ElephantSQL: ElephantSQL is a PostgreSQL database as a service. It is used as the database for the Blog Collective project, providing a reliable and scalable storage solution for the application's data.
+
+### Tools
+- **Git**: A distributed version control system used for tracking changes in the project's source code.
+- **GitHub**: A web-based hosting service for version control repositories, used for storing and managing the project's source code.
+- **Gitpod**: An online integrated development environment (IDE) used for developing and testing the Gamers United project.
+- **Heroku**: A cloud platform that enables deployment and hosting of web applications. Heroku was used for deploying the Gamers United project to a live server.
+- **Lucid Chart**: An online database design and diagramming tool that simplifies the process of creating and visualizing database schemas. lucidchart.com was used for designing and documenting the database schema of the Gamers United project.
+- **Google Fonts**: A collection of free and open-source fonts used for typography on Gamers United website.
+- **Uxwing**: A library of icons used for adding scalable vector icons to Gamers United website.
+
+
+
+### Supporting Libraries and Packages
+- asgiref==3.8.1
+- black==23.1.0
+- certifi==2022.12.7
+- cffi==1.15.1
+- charset-normalizer==3.1.0
+- click==8.1.3
+- cloudinary==1.32.0
+- colorama==0.4.6
+- crispy-bootstrap5==0.7
+- cryptography==39.0.2
+- defusedxml==0.7.1
+- Django==5.1
+- django-allauth==0.53.0
+- django-cloudinary-storage==0.3.0
+- django-crispy-forms==2.0
+- django-reorder==0.2.1
+- django-resized==1.0.2
+- django-richtextfield==1.6.1
+- idna==3.4
+- mypy-extensions==1.0.0
+- oauthlib==3.2.2
+- packaging==23.2
+- pathspec==0.11.1
+- Pillow==9.4.0
+- platformdirs==3.9.1
+- pycparser==2.21
+- PyJWT==2.6.0
+- python3-openid==3.2.0
+- requests==2.32.3
+- requests-oauthlib==1.3.1
+- six==1.16.0
+- sqlparse==0.4.3
+- tomli==2.0.1
+- tzdata==2022.7
+- urllib3==1.26.15
+
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
