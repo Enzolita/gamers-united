@@ -340,3 +340,80 @@ For a comprehensive view of the project's trajectory, user stories, and bug trac
   
 </p>
 
+# Features
+### Landing Page:
+- On the landing page, a prominent blue call-to-action button invites users to register and join our exclusive VIP blogging community. Additionally, a captivating hero image featuring a magic book is strategically positioned to immediately capture the user's attention and evoke the essence of the blogging experience.<details><summary>See Screenshot **Landingpage**</summary><img src="docs/features/landing-page.png"></details>
+
+- Visitors can easily navigate to different sections available for unauthorized users of the website through the navigation bar. Visitors can also access our social media through the footer section.<details><summary>See Screenshot **Navbar**</summary><img src="docs/features/navbar.png"></details><details><summary>See Screenshot **Footer**</summary><img src="docs/features/footer.png"></details>
+
+### Blog Pages:
+- When the user has logged in they will be directed to the Blog main page where they can scroll through blog article cards. <details><summary>See Screenshot **Main**</summary><img src="docs/features/features-blog-page.png"></details>
+
+### Blog Detail Page:
+- The blog details page displays comprehensive information about each article, including details about the writer and the article's creation date.<details><summary>See Screenshot **Post detail**</summary><img src="docs/features/features-blog-detail-page.png"></details>
+
+- Authors of posts have the privilege to edit or delete their content, ensuring they have control over their contributions.<details><summary>See Screenshot **Editing**</summary><img src="docs/features/features-blog-post-edit.png"></details><details><summary>See Screenshot **Delete**</summary><img src="docs/features/features-blog-post-delete.png"></details>
+
+- Users can express their appreciation for a well-written blog post by liking it, which not only supports the author but also recognizes the quality of the content.<details><summary>See Screenshot **Like**</summary><img src="docs/features/features-blog-editing.png"></details>
+
+- Users can actively participate in the community by leaving comments on recipes. This provides a platform for sharing thoughts, suggestions, and feedback, fostering a vibrant and engaging community. Users also have the option to delete comments.<details><summary>See Screenshot **Comment**</summary><img src="docs/features/features-comment.png"></details>
+
+### User Account Management:
+- The account sign-up form allows new users to create an account and join the Gamers United community. The form has validation to make sure that the user enters the correct information needed. This is a Django built-in validation system. Such validation is:
+
+    - **Username**: Required and has a maximum of 150 characters or fewer. Only letters, digits, and @/./+/-/_ are allowed.
+    - **Email**: Required and must be in a valid email format.
+    - **Password**: Subject to the following constraints:
+        - Cannot be too similar to your other personal information.
+        - Must contain at least 8 characters.
+        - Cannot be a commonly used password.
+        - Cannot be entirely numeric.
+    - See Screenshot<details><summary>**SIGNUP VALIDATION**</summary><img src="docs/features/features-blog-form-valid.png"></details>
+
+- The login form ensures secure access to Gamers United by verifying your username and password. If you face login issues, use the 'Forgot Password?' link to reset your password. The form also displays validation error messages to guide you through any input errors.
+    - See Screenshot<details><summary>**LOGIN VALIDATION**</summary><img src="docs/features/sign-in.png"></details>
+
+
+- When an account is successfully created, the user will receive a confirmation message and gain access to the profile menu.<details><summary>See Screenshot **Success**</summary><img src="docs/features/features-loggedin-user.png"></details>
+
+- Users can create posts.<details><summary>See Screenshot **Create Post**</summary><img src="docs/features/add-post.png"></details>
+
+- Users can access their profile page, where they can edit, delete, or change their password.<details><summary>See Screenshot **My Profile**</summary><img src="docs/features/features-profile.png"></details><details><summary>See Screenshot **Update Profile**</summary><img src="docs/features/features-update-profile.png"></details><details><summary>See Screenshot **Change Password**</summary><img src="docs/features/features-change-password.png"></details><details><summary>See Screenshot **Delete Account**</summary><img src="docs/features/features-delete-account.png"></details>
+
+- Users can view all their articles on a single page. This page will also display all user's Liked articles. If there is no post created or liked, that will be displayed.<details><summary>See Screenshot **My Articles**</summary><img src="docs/features/features-my-articles.png"></details><details><summary>See Screenshot **None Articles/Likes**</summary><img src="docs/features/features-my-articles-none.png"></details>
+
+- Users can also use the "Logout" option to sign out of their accounts. Upon doing so, they will be directed to a confirmation page where they can confirm the logout.<details><summary>See Screenshot **Logout**</summary><img src="docs/features/features-logout.png"></details>
+
+
+### Navigation:
+- The navigation bar provides convenient access to various sections and pages of Gamers United, dynamically adjusting its options based on the user's authorization status. Authorized users also have the ability to submit queries to Gamers United using the Contact Us form. Users will have a confirmation message when successfully submit the form.<details><summary>See Screenshot **Contact Us**</summary><img src="docs/features/features-contactus.png"></details><details><summary>See Screenshot **Contact Us Submitted**</summary><img src="docs/features/features-contact-success.png"></details>
+
+- Both unauthorized and authorized users have access to the About Us page. However, depending on whether you are logged in or not, the call-to-action button displayed varies between "Log In" and "Create Post."<details><summary>See Screenshot **About Us Authorized**</summary><img src="docs/features/features-about-unauth.png"></details><details><summary>See Screenshot **About Us Unauthorized**</summary><img src="docs/features/features-about-auth.png"></details>
+
+- On smaller screens, the navigation bar collapses into a burger menu, allowing for a compact and mobile-friendly navigation experience. Users can access the menu by clicking on the burger icon, which reveals the navigation options in a dropdown fashion.
+
+
+### Future Features
+
+Here are some exciting enhancements we plan to introduce to **Gamers United**:
+
+- **Favorites and Save for Later:**  
+  Allow users to mark blog articles as favorites or save them for later reading, making it easier to revisit content.
+
+- **Effortless Social Media Sharing:**  
+  Enable users to easily share their favorite blog posts across various social media platforms, increasing the reach and visibility of **Gamers United**.
+
+- **Multilingual Capabilities:**  
+  Add support for multiple languages to make **Gamers United** accessible to a global audience and foster a more inclusive experience.
+
+- **Email Verification for Account Creation:**  
+  Implement email verification during account setup to improve security and ensure user authenticity.
+
+- **Password Recovery Options:**  
+  Introduce a password recovery feature to allow users to securely reset their passwords and regain access to their accounts.
+
+
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
