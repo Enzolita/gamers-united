@@ -306,3 +306,37 @@ Clicking on your profile image in the navigation bar gives you access to various
 <p align="center">
   
 </p>
+
+# Methodology
+
+The Gamers United project follows a methodology inspired by agile principles, fostering collaboration, flexibility, and gradual development. The outlined approach has guided the project's evolution:
+
+### Agile Project Management with GitHub Projects
+To streamline project management, GitHub Projects is employed as a central hub. User stories and tasks are structured as GitHub issues, creating an organized workflow. The GitHub project board serves as a visual representation, tracking progress effectively.
+
+### User Stories as GitHub Issues
+Transforming user stories into GitHub issues captures user-centric functionalities. These issues interlink with respective user stories, simplifying access to criteria, tasks, and discussions.
+
+### Bug Tracking for Seamless Development
+Bugs uncovered during development are documented as GitHub issues, offering insights into each bug's characteristics, impact, and reproduction steps. By hyperlinking these issues in README.md, users can stay updated on bug resolutions and contribute insights.
+
+### Iterative Development Approach
+--
+
+### Future Backlog and Progress
+---
+
+**Labels and User Story Distribution (MoSCoW):**
+
+- **Must-Have:** -
+- **Should-Have:** -
+- **Could-Have:** -
+- **Wont-Have:** -
+- **Task:** -
+
+For a comprehensive view of the project's trajectory, user stories, and bug tracking, explore the [Kanban board](-).
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  
+</p>
+
