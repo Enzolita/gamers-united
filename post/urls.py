@@ -9,10 +9,14 @@ from .views import (
     PostDeleteView,
     CommentDeleteView,
     CategoryView,
+    PostForm,
+    AddPost,
 )
 
 urlpatterns = [
     # View paths
+
+    path('', AddPost.as_view(), name="add_post"),
 
     path("", views.landing_page, name="landing_page"),
     path("about/", views.about, name="about"),

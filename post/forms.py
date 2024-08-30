@@ -1,5 +1,39 @@
 from django import forms
+from django.contrib.auth.models import User
+
+from django_summernote.widgets import SummernoteWidget
+
 from .models import Post, Comment, UserProfile, GameCategory
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+class PostForm(forms.ModelForm):
+    """
+    PostForm for blog posting
+    """
+
+    class Meta:
+        model = Post
+        fields = [
+            "title",
+            "category",
+            "device",
+            "featured_image",
+            "excerpt",
+            "content",
+        ]
+        widgets = {
+            "category": forms.Select(attrs={"class": "form-control"}),
+            "device": forms.Select(attrs={"class": "form-control"}),
+            "content": SummernoteWidget(attrs={"class": "form-control"}),
+            "title": forms.TextInput(
+                attrs={"class": "form-control",
+                       "placeholder": "Max 50 characters"}
+            ),
+            "excerpt": forms.TextInput(
+                attrs={"class": "form-control",
+                       "placeholder": "Max 75 characters"}
+            ),
+        }
 
 
 class CommentForm(forms.ModelForm):
@@ -34,34 +68,7 @@ class UserForm(forms.ModelForm):
     email = forms.EmailField(max_length=40)
 
 
-class PostForm(forms.ModelForm):
-    """
-    PostForm for blog posting
-    """
 
-    class Meta:
-        model = Post
-        fields = [
-            "title",
-            "category",
-            "device",
-            "featured_image",
-            "excerpt",
-            "content",
-        ]
-        widgets = {
-            "category": forms.Select(attrs={"class": "form-control"}),
-            "device": forms.Select(attrs={"class": "form-control"}),
-            "content": SummernoteWidget(attrs={"class": "form-control"}),
-            "title": forms.TextInput(
-                attrs={"class": "form-control",
-                       "placeholder": "Max 50 characters"}
-            ),
-            "excerpt": forms.TextInput(
-                attrs={"class": "form-control",
-                       "placeholder": "Max 75 characters"}
-            ),
-        }
 
 
 class ProfileForm(forms.ModelForm):

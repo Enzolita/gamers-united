@@ -1,4 +1,12 @@
+from django.urls import reverse_lazy
 from django.views.generic import CreateView
+from django.contrib.auth.models import User
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.views import generic, View
 from django.views.generic import (
@@ -14,6 +22,34 @@ from cloudinary.models import CloudinaryField
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, UserProfile, Comment
 from .forms import CommentForm, UserForm, ProfileForm, PostForm, ContactForm
+
+
+@login_required
+def add_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('home')  # Redirect to home page after successful creation
+    else:
+        form = PostForm()
+    return render(request, 'your_template.html', {'form': form})
+
+
+class AddPost(LoginRequiredMixin, CreateView):
+    """ Add post view """
+    template_name = 'post/add_posts.html'
+    model = Post
+    form_class = PostForm
+    success_url = '/post/'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(AddPost, self).form_valid(form)
+
+
 
 # View functions
 # ==============================
