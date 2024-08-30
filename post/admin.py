@@ -6,12 +6,6 @@ admin.site.register(UserProfile)
 admin.site.register(GameCategory)
 
 
-@admin.register(Post)
-class PostAdmin(admin.ModelAdmin):
-    """
-    Post model in admin panel
-    """
-    summernote_fields = ('content')
 
 
 @admin.register(Comment)
