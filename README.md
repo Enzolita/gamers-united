@@ -34,3 +34,39 @@ Developer: [Elena Hanna](https://github.com/KimBergstroem) <br>
 ![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff&style=for-the-badge)
 ![Django Badge](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=for-the-badge)
 
+
+# Project Goals 
+
+Gamers United is a Django web application focused on building a dynamic platform where gamers can share their insights, opinions, cheat codes, and experiences related to various games. The core objectives of this project include:
+The key objectives of the project include:
+
+- **Supporting Gamers:** Creating a dedicated space for gamers to contribute their reviews, articles, and discussions about different games.
+- **User Experience:** Providing an engaging and intuitive interface that encourages users to explore content and interact with the community.
+- **Content Organization:** Enabling users to effectively categorize and manage their articles, reviews, and discussions.
+- **User Profiles:** Allowing users to create personalized profiles, highlight their gaming preferences, and track their contributions.
+- **Active Participation:** Encouraging user interactions through comments, reviews, and discussions to build a strong sense of community.
+- **Administrator Control:** Giving administrators the tools to manage user accounts, moderate content, and maintain a safe environment.
+
+
+### User Goals
+- Exploring and sharing detailed game reviews and articles.
+- Personalizing their profiles to showcase their gaming interests.
+- Engaging in discussions and leaving comments to contribute to the gaming community.
+- Saving favorite articles and reviews for easy access.
+- Submitting their own game reviews, articles, and insights.
+
+
+### Site Owner Goals
+
+- Offering a space for gamers to share their perspectives and insights.
+- Curating a wide variety of gaming content to meet diverse tastes.
+- Building a vibrant gaming community where users can connect and exchange experiences.
+- Moderating user-generated content to maintain quality and appropriateness.
+- Boosting user interaction and engagement through intuitive design and features.
+
+ Project **Gamers United** is dedicated to developing a vibrant community where gamers can connect, share, and delve into the gaming world through thoughtful articles, discussions, and reviews.
+
+<p align="right">(<a href="#table-of-content">back to top</a>)</p>
+<p align="center">
+  <img src="docs/readme.md/readme-divider3.png" />
+</p>
