@@ -8,6 +8,7 @@ cloudinary==1.32.0
 colorama==0.4.6
 crispy-bootstrap5==0.7
 cryptography==39.0.2
+dj-database-url==1.0.0
 defusedxml==0.7.1
 Django==4.1.7
 django-allauth==0.53.0
