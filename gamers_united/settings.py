@@ -135,7 +135,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
     "http://127.0.0.1:8000",
-    'https://8000-enzolita-gamersunited-3298nwdsxm9.ws.codeinstitute-ide.net',
+     'https://8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
 ]
 
 
@@ -187,6 +187,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Cloudinary Settings
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
