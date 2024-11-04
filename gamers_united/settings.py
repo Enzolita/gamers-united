@@ -26,11 +26,11 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
 '8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
-'https://gamers-united-63fd4bb05519.herokuapp.com']
+'gamers-united-63fd4bb05519.herokuapp.com']
 
 
 # Application definition
