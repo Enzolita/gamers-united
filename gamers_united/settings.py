@@ -58,10 +58,24 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'cloudinary',
     'cloudinary_storage',
+    'djrichtextfield'
 ]
 
 
 SITE_ID = 1
+
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//cdn.ckeditor.com/4.14.0/standard/ckeditor.js'],
+    'init_template': 'djrichtextfield/init/ckeditor.js',
+    'settings': {
+        'toolbar': [
+            ['Format', 'Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList'], ['Undo', 'Redo'],
+            ['Maximize']
+        ],
+        'format_tags': 'p;h1;h2;h3'
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,9 +147,10 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
+    "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com",
     "http://127.0.0.1:8000",
-     'https://8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
+    'https://8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
 ]
 
 
