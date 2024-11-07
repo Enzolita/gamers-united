@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
-    background-color: blueviolet;
+    background-color: rgb(29, 12, 180);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 main {
     flex: 1 0 auto;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(126,57,191,0.9164040616246498) 35%, rgba(0,212,255,1) 100%);
+    background: lightblue;
 }
 
 /* Footer */
@@ -47,7 +47,7 @@ main {
 footer {
     flex-shrink: 0;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(126,57,191,0.9164040616246498) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(16, 1, 153, 0.916) 35%, rgba(0,212,255,1) 100%);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -64,7 +64,7 @@ footer {
 /* Header */
 .navbar {
     background-color: var(--blue);
-    box-shadow var(--smal-box-shadow);
+    box-shadow: var(--smal-box-shadow);
 }
 
 a.nav-link {
@@ -90,7 +90,7 @@ img.logo{
 }
 
 
-/* Games */
+/* Posts */
 
 .card {
     height: 90%;
@@ -104,4 +104,59 @@ img.logo{
 
 .posts:hover {
     cursor: pointer;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content, .content-section, .ratings, .post-detail {
+    width: 100%;
+}
+
+.post-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-pic {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 62.5em) {
+    .post-info {
+        flex-direction: row;
+        border: 1px solid var(--black);
+    }
+
+    .post-img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .post-detail {
+        width: 60%;
+        padding: 2rem;
+    }
+
+    .post-container {
+        flex-direction: row;
+    }
+
+    .content {
+        width: 33.33%;
+    }
+
+    .ratings {
+        width: 66.66%;
+    }
 }
