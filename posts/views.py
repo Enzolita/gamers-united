@@ -1,7 +1,9 @@
 from django.views.generic import (
-    CreateView, ListView,
-    DetailView, DeleteView,
-    UpdateView
+    CreateView,
+    ListView,
+    DetailView,
+    DeleteView,
+    UpdateView,
 )
 
 from django.contrib.auth.mixins import (
@@ -20,12 +22,12 @@ class Posts(ListView):
     context_object_name = "posts"
 
     def get_queryset(self, **kwargs):
-        query = self.request.GET.get('q')
+        query = self.request.GET.get("q")
         if query:
             posts = self.model.objects.filter(
-                Q(title__icontains=query) |
-                Q(content__icontains=query) |
-                Q(device__icontains=query)
+                Q(title__icontains=query)
+                | Q(content__icontains=query)
+                | Q(device__icontains=query)
             )
         else:
             posts = self.model.objects.all()
@@ -50,18 +52,20 @@ class AddPost(LoginRequiredMixin, CreateView):
 
 
 class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    template_name = 'posts/edit_post.html'
+    """Edit a post"""
+    template_name = "posts/edit_post.html"
     model = Post
     form_class = PostForm
-    success_url = '/posts/'
+    success_url = "/posts/"
 
     def test_func(self):
         return self.request.user == self.get_object().author
 
 
 class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """Delete a post"""
     model = Post
-    success_url = '/posts/'
+    success_url = "/posts/"
 
     def test_func(self):
         return self.request.user == self.get_object().author

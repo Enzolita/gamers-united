@@ -11,6 +11,7 @@ from django.urls import reverse
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 # ==============================
 # Profile Model
 # ==============================
@@ -18,25 +19,24 @@ class UserProfile(models.Model):
     """
     Database model for user's profile
     """
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.TextField(
-        max_length=150, default="Currently no bio", blank=True
-    )
+    bio = models.TextField(max_length=150, default="Currently no bio", blank=True)
     username = models.CharField(max_length=15, default="User")
     first_name = models.CharField(max_length=15, default="Name")
     last_name = models.CharField(max_length=15, default="Lastname")
     email = models.EmailField(max_length=40, default="User@gamers-united.com")
     profile_picture = CloudinaryField(
-        'image',
-        default=("https://res.cloudinary.com/dpwnz6ieo/image/upload/"
-                 "v1694794787/"
-                 "illustration-user-avatar-icon_53876-5907_uvdvsz.avif"),
+        "image",
+        default=(
+            "https://res.cloudinary.com/dpwnz6ieo/image/upload/"
+            "v1694794787/"
+            "illustration-user-avatar-icon_53876-5907_uvdvsz.avif"
+        ),
         blank=True,
-        null=True
+        null=True,
     )
-    country = models.CharField(
-        max_length=30, default="Digital Citizen", blank=True
-    )
+    country = models.CharField(max_length=30, default="Digital Citizen", blank=True)
 
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
@@ -68,6 +68,7 @@ class GameCategory(models.Model):
     """
     Database model for game categories
     """
+
     name = models.CharField(max_length=25)
 
     def __str__(self):
@@ -84,12 +85,11 @@ class Post(models.Model):
     """
     Database model for posts, representing a blog post or article
     """
+
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
-    category = models.ForeignKey(
-        GameCategory, on_delete=models.CASCADE, null=True
-    )
+    category = models.ForeignKey(GameCategory, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     content = RichTextField(max_length=3000, blank=True)
@@ -102,7 +102,7 @@ class Post(models.Model):
         upload_to="posts/",
         force_format="WEBP",
         blank=True,
-        null=True
+        null=True,
     )
 
     DEVICE_CHOICES = (
@@ -119,7 +119,7 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             base_slug = slugify(self.title)
-            timestamp = timezone.now().strftime('%Y%m%d%H%M%S')
+            timestamp = timezone.now().strftime("%Y%m%d%H%M%S")
             self.slug = f"{base_slug}-{timestamp}"
         super().save(*args, **kwargs)
 
@@ -137,12 +137,11 @@ class Comment(models.Model):
     """
     Database model for comments
     """
+
     body = models.TextField(max_length=300)
     approved = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="comments"
-    )
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:

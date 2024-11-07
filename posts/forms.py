@@ -1,10 +1,12 @@
 from django import forms
+from djrichtextfield.widgets import RichTextWidget
 from django.contrib.auth.models import User
 
 from django_summernote.widgets import SummernoteWidget
 
 from .models import Post, Comment, UserProfile, GameCategory
 from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 class PostForm(forms.ModelForm):
     """
@@ -17,21 +19,15 @@ class PostForm(forms.ModelForm):
             "title",
             "category",
             "device",
-            "featured_image",
-            "excerpt",
             "content",
+            "image",
         ]
         widgets = {
             "category": forms.Select(attrs={"class": "form-control"}),
             "device": forms.Select(attrs={"class": "form-control"}),
             "content": SummernoteWidget(attrs={"class": "form-control"}),
             "title": forms.TextInput(
-                attrs={"class": "form-control",
-                       "placeholder": "Max 50 characters"}
-            ),
-            "excerpt": forms.TextInput(
-                attrs={"class": "form-control",
-                       "placeholder": "Max 75 characters"}
+                attrs={"class": "form-control", "placeholder": "Max 50 characters"}
             ),
         }
 
@@ -66,9 +62,6 @@ class UserForm(forms.ModelForm):
     first_name = forms.CharField(max_length=15)
     last_name = forms.CharField(max_length=15)
     email = forms.EmailField(max_length=40)
-
-
-
 
 
 class ProfileForm(forms.ModelForm):
