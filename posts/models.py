@@ -9,6 +9,9 @@ from django.utils.text import slugify
 from django.dispatch import receiver
 from django.urls import reverse
 
+from django_resized import ResizedImageField
+
+
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
@@ -29,9 +32,9 @@ class UserProfile(models.Model):
     profile_picture = CloudinaryField(
         "image",
         default=(
-            "https://res.cloudinary.com/dpwnz6ieo/image/upload/"
-            "v1694794787/"
-            "illustration-user-avatar-icon_53876-5907_uvdvsz.avif"
+            "https://res.cloudinary.com/dqk6ad4tr/image/upload/"
+            "v1731314077/"
+            "default_profile_picture_d3apgy.png"
         ),
         blank=True,
         null=True,

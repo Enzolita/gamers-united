@@ -6,7 +6,7 @@ from posts.models import Post
 from django.contrib.auth.mixins import LoginRequiredMixin
 from posts.forms import ProfileForm
 from posts.views import EditProfile
-
+from posts.models import UserProfile
 
 
 class Index(ListView):
@@ -32,10 +32,12 @@ class ProfileView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         user_id = self.kwargs.get('id')
         user = get_object_or_404(User, id=user_id)
+        profile = get_object_or_404(UserProfile, user=user)
         
-        form = ProfileForm(instance=user)
+        form = ProfileForm(instance=profile)
         
         context = super().get_context_data(**kwargs)
         context['user'] = user
+        context['profile'] = profile
         context['form'] = form
         return context
