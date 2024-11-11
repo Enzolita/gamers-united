@@ -16,6 +16,7 @@
                 <h1 class="text-center">{{ post.title }}</h1>
                 <p class="text-center">Posted by {{ post.author }} on {{ post.created_on }}</p>
                 <hr>
+
                 <p>{{ post.content }}</p>
 
                 {% if post.category %}
@@ -34,7 +35,6 @@
                 {% endif %}
             </div>
         </div>
-
         <div class="post-container">
             <div class="content-section p-3">
                 <h2>Content</h2>

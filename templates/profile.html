@@ -17,13 +17,13 @@
             <h1>{{ profile.user.username }}</h1>
             <p><strong>Joined: </strong>{{ profile.user.date_joined|date:'d M Y' }}</p>
             <p><strong>Posts: </strong>{{ profile.user.post_owner.count }}</p>
-            {% if profile.bio %}
-            <p>{{ profile.bio|safe }}</p>
+            {% if profile.bio is not none %}
+            {{ profile.bio|safe }}
             {% endif %}
-
+            
             {% if request.user == profile.user %}
             <div>
-                <button id="myBtn" class="btn btn-primary w-20 mb-4">Edit</button>
+                <button id="myBtn" class="btn btn-primary rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">Edit</button>
             </div>
             {% endif %}
         </div>
@@ -52,7 +52,7 @@
                 {{ form|crispy }}
                 {{ form.media }}
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary w-20">Edit</button>
+                    <button type="submit" class="btn btn-primary rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">Edit</button>
                 </div>
             </form>
         </div>
