@@ -8,8 +8,8 @@
     <div class="profile">
         <div class="info">
             <div class="profile-img text-center">
-                {% if profile.image.url is not none %}
-                <img src="{{ profile.image.url }}" alt="{{ profile.user.username }}'s profile image">
+                {% if profile.profile_picture.url is not none %}
+                <img src="{{ profile.profile_picture.url }}" alt="{{ profile.user.username }}'s profile image">
                 {% else %}
                 <img src="{% static '/images/default_profile_picture.png' %}" alt="Default profile picture">
                 {% endif %}
