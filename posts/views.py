@@ -5,17 +5,14 @@ from django.views.generic import (
     DeleteView,
     UpdateView,
 )
-
-from django.contrib.auth.mixins import (
-    UserPassesTestMixin, LoginRequiredMixin
-)
-
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.db.models import Q
+from django.shortcuts import render
+from .models import Post, UserProfile
+from .forms import PostForm, ProfileForm
 
-from .models import Post
-from .forms import PostForm
 
-
+# Display list of posts (with search functionality)
 class Posts(ListView):
     template_name = "posts/posts.html"
     model = Post
@@ -34,12 +31,14 @@ class Posts(ListView):
         return posts
 
 
+# View a detailed post
 class PostDetail(DetailView):
     template_name = "posts/post_detail.html"
     model = Post
     context_object_name = "post"
 
 
+# Add a new post
 class AddPost(LoginRequiredMixin, CreateView):
     template_name = "posts/add_post.html"
     model = Post
@@ -51,8 +50,8 @@ class AddPost(LoginRequiredMixin, CreateView):
         return super(AddPost, self).form_valid(form)
 
 
+# Edit an existing post
 class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    """Edit a post"""
     template_name = "posts/edit_post.html"
     model = Post
     form_class = PostForm
@@ -62,10 +61,24 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user == self.get_object().author
 
 
+# Delete a post
 class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """Delete a post"""
     model = Post
     success_url = "/posts/"
 
     def test_func(self):
         return self.request.user == self.get_object().author
+
+
+class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """Edit a profile"""
+
+    form_class = ProfileForm
+    model = UserProfile
+
+    def form_valid(self, form):
+        self.success_url = f'/profile/user/{self.kwargs["pk"]}/'
+        return super().form_valid(form)
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
