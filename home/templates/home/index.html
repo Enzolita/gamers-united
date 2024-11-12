@@ -3,29 +3,56 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<div class="page-header page-header_align_center" 
+    style="background-image:url(https://res.cloudinary.com/dqk6ad4tr/image/upload/v1731418388/gamers_united_tjepbg.jpg); 
+           background-size:cover; 
+           background-repeat:no-repeat; 
+           background-attachment:scroll; 
+           background-position:center center; 
+           background-color: #f2f2f4; 
+           height: 520px; 
+           margin-bottom: 60px; 
+           padding-top: 120px; 
+           padding-bottom: 50px;">
+    <div class="page-header_wrapper">
+    </div>
+</div>
+
+    
+                <!-- Header text content-->
+                <div class="text-center text-xxl-start">
+                </div>
+            </div>
+            <div class="col-xxl-7"></div>
+                <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                    <div class="profile bg-gradient-primary-to-secondary">
+                        <img class="profile-img img-fluid hero-img-animation img22"
+                            src="https://res.cloudinary.com/dqk6ad4tr/image/upload/v1731418388/gamers_united_tjepbg.jpg"
+                            alt="Responsive image" width="380" height="580">
+                    </div>
+                </div>
+            </div>
+            <section class="text-center">
+                <h1 class="main-title mx-auto">Discover the great blog and community for Gamers!</h1>
+            </section>
+        </div>
+    </div>
+</header>
 <div class="container flex-column pt-3">
-    <section class="text-center">
-        <h1 class="main-title mx-auto">Discover the great blog and community for Gamers!</h1>
-
-        <p class="pt-4">
-            Welcome to Gamers United!
-            Hello and welcome to Gamers United – where gamers from all walks of life come together to celebrate, discuss, and dive deep into the world we love.
-            Whether you're a console veteran, a PC enthusiast, a mobile strategist, or just starting your gaming journey, this is your space.
-
-            Here at Gamers United, we’re passionate about everything gaming, from the latest releases and groundbreaking tech to classic games that hold a special place in our hearts.
-            Expect reviews, tips, industry news, community spotlights, and thought-provoking discussions on gaming culture.
-            But most importantly, Gamers United is about you – a place for gamers to connect, share, and feel at home.
-            So grab your controller, power up, and get ready to join a community that’s as diverse and dynamic as the games we play. Welcome to Gamers United – where the game never ends.
-        </p>
-    </section>
     <section>
         <div class="post-cont">
             {% for post in posts %} 
                 <a href="{% url 'post_detail' post.id %}" class="img-container">
-                    <img src="{{post.images.url}}" alt="{{post.image_alt}}" style="width: 100%">
+                    <img src="{{post.image.url}}" alt="{{post.image_alt}}" style="width: 100%; height: 100%;">
                     <div class="centered"><h2>{{post.title}}</h2></div>
                 </a>
             {% endfor %}
+        </div>
+        <div class="container px-5 pb-5 ">
+            <div class="row gx-5 align-items-center">
+                <div class="col-xxl-5">
+            <a class="btn btn-primary rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                href="{% url 'account_signup' %}">Join Now</a>
         </div>
     </section>
 </div>
