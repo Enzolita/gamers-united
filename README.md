@@ -339,7 +339,7 @@ Clicking on your profile image in the navigation bar gives you access to various
 
 
 ### Supporting Libraries and Packages
-- asgiref==3.8.1
+- asgiref==3.6.0
 - black==23.1.0
 - certifi==2022.12.7
 - cffi==1.15.1
@@ -349,8 +349,8 @@ Clicking on your profile image in the navigation bar gives you access to various
 - colorama==0.4.6
 - crispy-bootstrap5==0.7
 - cryptography==39.0.2
-- defusedxml==0.7.1
-- Django==5.1
+- dj-database-url==1.0.0
+- Django==4.1.7
 - django-allauth==0.53.0
 - django-cloudinary-storage==0.3.0
 - django-crispy-forms==2.0
@@ -358,18 +358,17 @@ Clicking on your profile image in the navigation bar gives you access to various
 - django-resized==1.0.2
 - django-richtextfield==1.6.1
 - idna==3.4
-- mypy-extensions==1.0.0
 - oauthlib==3.2.2
-- packaging==23.2
+- packaging==23.0
 - pathspec==0.11.1
 - Pillow==9.4.0
-- platformdirs==3.9.1
+- platformdirs==3.1.1
+- psycopg2==2.9.6
 - pycparser==2.21
 - PyJWT==2.6.0
 - python3-openid==3.2.0
-- requests==2.32.3
+- requests==2.28.2
 - requests-oauthlib==1.3.1
-- six==1.16.0
 - sqlparse==0.4.3
 - tomli==2.0.1
 - tzdata==2022.7
