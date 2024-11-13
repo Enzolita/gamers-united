@@ -131,8 +131,53 @@ img.logo{
     width: 100%;
     height: auto;
 }
+/* Profiles */
+
+.profile-img {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.profile-img img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info {
+    width: 100%;
+    text-align: center;
+}
+
+.profile-posts {
+    width: 100%;
+}
+
+@media screen and (min-width:40em){
+    .form {
+        width: 50%;
+    }
+
+    .post-cont {
+        flex-direction: row;
+    }
+
+    .img-container {
+        flex-direction: row;
+        width: 29%;
+    }
+}
 
 @media screen and (min-width: 62.5em) {
+    .main-title {
+        width: 50%;
+    }
+    
     .post-info {
         flex-direction: row;
         border: 1px solid var(--black);
@@ -158,5 +203,22 @@ img.logo{
 
     .ratings {
         width: 66.66%;
+    }
+
+    .profile {
+        flex-direction: row;
+    }
+
+    .info {
+        width: 30%;
+    }
+
+    .profile-posts {
+        width: 70%;
+        padding: 1.5rem 3rem;
+    }
+
+    .profile-posts a {
+        text-decoration: none;
     }
 }
