@@ -10,7 +10,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('posts/', include('posts.urls')),
     path('about/', About.as_view(), name='about'),
-    path('profile/<int:id>/', ProfileView.as_view(), name='profile'),
+    path('profile/user/<int:id>/', ProfileView.as_view(), name='profile'),
     path('posts/', Posts.as_view(), name='posts'),
     path('posts/<int:pk>/', PostDetail.as_view(), name='post_detail'),
     path('posts/add/', AddPost.as_view(), name='add_post'),
