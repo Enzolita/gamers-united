@@ -1,46 +1,98 @@
 {% extends "base.html" %}
 
+
+
 {% block title %}Post Detail - {{ post.title }}{% endblock %}
 
+
+
 {% block content %} 
-    <div class="container">
-        <div class="post-info mt-3 p-1">
-            <div class="post-img">
-                {% if post.image %}
-                    <img src="{{ post.image.url }}" alt="{{ post.image_alt }}" class="post-pic">
-                {% else %}
+
+<div class="container my-5">
+
+    <!-- Post Information -->
+
+    <div class="post-info mt-3 p-3 rounded shadow-sm bg-light">
+
+        <div class="post-img mb-4 text-center">
+
+            {% if post.image %}
+
+                <img src="{{ post.image.url }}" alt="{{ post.image_alt }}" class="post-pic img-fluid rounded" style="max-height: 400px; object-fit: cover;">
+
+            {% else %}
+
+                <div class="bg-light text-muted py-5 rounded">
+
                     <p>No image available</p>
-                {% endif %}
-            </div>
-            <div class="post-detail">
-                <h1 class="text-center">{{ post.title }}</h1>
-                <p class="text-center">Posted by {{ post.author }} on {{ post.created_on }}</p>
-                <hr>
 
-                <p>{{ post.content|safe }}</p>
+                </div>
 
-                {% if post.category %}
-                    <p class="p-3"><strong>Category: </strong> {{ post.category.name }}</p>
-                {% endif %}
+            {% endif %}
 
-                {% if post.device %}
-                    <p class="p-3"><strong>Device: </strong> {{ post.device|title }}</p>
-                {% endif %}
-
-                {% if request.user == post.author %}
-                    <div class="text-center">
-                        <a href="{% url 'edit_post' post.id %}" class="btn btn-primary rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">Edit</a>
-                        <a href="{% url 'delete_post' post.id %}" class="btn btn-primary rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">Delete</a>
-                    </div>
-                {% endif %}
-            </div>
         </div>
 
-        <div class="post-container">
-            <div class="content-section p-3">
-                <h2>Content</h2>
-                <p>{{ post.content|safe }}</p>
-            </div>
+        
+
+        <!-- Post Title and Details -->
+
+        <div class="post-detail text-center">
+
+            <h1 class="display-5 fw-bold detail-header">{{ post.title }}</h1>
+
+            <p class="text-muted mb-4">Posted by <strong>{{ post.author }}</strong> on {{ post.created_on }}</p>
+
+            <hr class="my-4">
+
         </div>
+
+        
+
+        <!-- Post Content -->
+
+        <div class="content-section card p-4 shadow-sm mb-4">
+
+            <h2 class="detail-header">Content</h2>
+
+            <p>{{ post.content|safe }}</p>
+
+        </div>
+
+        
+
+        <!-- Category and Device Information -->
+
+        {% if post.category %}
+
+            <p class="text-muted"><strong>Category:</strong> {{ post.category.name }}</p>
+
+        {% endif %}
+
+        {% if post.device %}
+
+            <p class="text-muted"><strong>Device:</strong> {{ post.device|title }}</p>
+
+        {% endif %}
+
+        
+
+        <!-- Edit/Delete Buttons for Author -->
+
+        {% if request.user == post.author %}
+
+        <div class="text-center mt-4">
+
+            <a href="{% url 'edit_post' post.id %}" class="btn btn-outline-primary rounded-pill px-4 py-2 me-3">Edit</a>
+
+            <a href="{% url 'delete_post' post.id %}" class="btn btn-outline-danger rounded-pill px-4 py-2">Delete</a>
+
+        </div>
+
+        {% endif %}
+
     </div>
+
+</div>
+
 {% endblock %}
+
