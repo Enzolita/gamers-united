@@ -3,20 +3,28 @@
 {% block title %}Posts{% endblock %}
 
 {% block content %} 
-<h1 class="text-center p-2 d-block">
-    Latest Posts
-</h1>
-<div class="container d-flex flex-row flex-wrap justify-content-center">
+
+<h1 class="text-center p-4 mb-4 border-bottom">Latest Posts</h1>
+
+<!-- Posts Container -->
+<div class="container d-flex flex-wrap justify-content-center">
     {% for post in posts %} 
-    <a href="{% url 'post_detail' post.id %}" class="posts" aria-label="Click to view {{post.title}}">
-        <div class="card m-3" style="width: 18rem;">
+    <a href="{% url 'post_detail' post.id %}" class="text-decoration-none" aria-label="Click to view {{ post.title }}">
+        <div class="card post-card m-3 shadow-sm" style="width: 18rem; border-radius: 10px; overflow: hidden;">
+
+            <!-- Post Image -->
             {% if post.image %}
-                <img src="{{post.image.url}}" class="card-img-top" alt="{{post.image_alt}}" style="height: 100%;">
-            {% else %}<p>No image available</p>
+                <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.image_alt }}" style="height: 200px; object-fit: cover;">
+            {% else %}
+                <div class="d-flex align-items-center justify-content-center bg-light" style="height: 200px;">
+                    <p class="text-muted">No image available</p>
+                </div>
             {% endif %}
+            
+            <!-- Post Content -->
             <div class="card-body">
-              <h2 class="card-title">{{post.title}}</h2>
-              <p class="card-text">{{post.description|truncatechars:100}}</p>
+              <h5 class="card-title text-dark fw-bold">{{ post.title }}</h5>
+              <p class="card-text text-muted">{{ post.description|truncatechars:100 }}</p>
             </div>
         </div>
     </a>
