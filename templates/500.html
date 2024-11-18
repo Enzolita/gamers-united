@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- 500 page template -->
+<div class="container-fluid d-flex flex-column align-items-center">
+    <h1 class="h1 text-center">Error 500: Internal Server Error</h1>
+    <h3 class="h3 text-center">There is nothing to see here!</h3>
+    <a href="{% url 'home' %}" class="btn btn-dark">Home</a>
+</div>
+{% endblock %}
