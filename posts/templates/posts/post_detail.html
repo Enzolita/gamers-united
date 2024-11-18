@@ -1,98 +1,85 @@
 {% extends "base.html" %}
 
-
-
 {% block title %}Post Detail - {{ post.title }}{% endblock %}
-
-
 
 {% block content %} 
 
 <div class="container my-5">
 
     <!-- Post Information -->
-
     <div class="post-info mt-3 p-3 rounded shadow-sm bg-light">
 
         <div class="post-img mb-4 text-center">
-
             {% if post.image %}
-
                 <img src="{{ post.image.url }}" alt="{{ post.image_alt }}" class="post-pic img-fluid rounded" style="max-height: 400px; object-fit: cover;">
-
             {% else %}
-
                 <div class="bg-light text-muted py-5 rounded">
-
                     <p>No image available</p>
-
                 </div>
-
             {% endif %}
-
         </div>
-
-        
 
         <!-- Post Title and Details -->
-
         <div class="post-detail text-center">
-
             <h1 class="display-5 fw-bold detail-header">{{ post.title }}</h1>
-
             <p class="text-muted mb-4">Posted by <strong>{{ post.author }}</strong> on {{ post.created_on }}</p>
-
             <hr class="my-4">
-
         </div>
-
-        
 
         <!-- Post Content -->
-
         <div class="content-section card p-4 shadow-sm mb-4">
-
             <h2 class="detail-header">Content</h2>
-
             <p>{{ post.content|safe }}</p>
-
         </div>
-
-        
 
         <!-- Category and Device Information -->
-
         {% if post.category %}
-
             <p class="text-muted"><strong>Category:</strong> {{ post.category.name }}</p>
-
         {% endif %}
-
         {% if post.device %}
-
             <p class="text-muted"><strong>Device:</strong> {{ post.device|title }}</p>
-
         {% endif %}
-
-        
 
         <!-- Edit/Delete Buttons for Author -->
-
         {% if request.user == post.author %}
-
         <div class="text-center mt-4">
-
             <a href="{% url 'edit_post' post.id %}" class="btn btn-outline-primary rounded-pill px-4 py-2 me-3">Edit</a>
-
             <a href="{% url 'delete_post' post.id %}" class="btn btn-outline-danger rounded-pill px-4 py-2">Delete</a>
-
         </div>
-
         {% endif %}
+    </div>
 
+    <!-- Updated Comments Section -->
+    <div class="comments-section mt-5">
+        <h2>Comments</h2>
+
+        <!-- List of comments -->
+        <ul class="comments-list">
+            {% for comment in post.comments.all %}
+                <li class="comment-item">
+                    <p class="comment-body">{{ comment.body }}</p>
+                    <p class="comment-meta">
+                        <strong>{{ comment.user.username }}</strong> on {{ comment.created_on }}
+                    </p>
+                </li>
+            {% empty %}
+                <li>No comments yet.</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Add Comment Form -->
+        <h3 class="add-comment-heading">Add a Comment</h3>
+        {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'add_comment' post.id %}" class="add-comment-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary mt-2">Add Comment</button>
+            </form>
+        {% else %}
+            <p>You need to <a href="{% url 'login' %}">login</a> to add a comment.</p>
+        {% endif %}
     </div>
 
 </div>
 
 {% endblock %}
-
