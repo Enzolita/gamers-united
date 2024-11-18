@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add a Comment</h2>
+
+{% if form.errors %}
+  <div class="alert alert-danger">
+    <strong>Error:</strong> Please fix the errors below.
+    <ul>
+      {% for field in form %}
+        {% for error in field.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-success">Submit Comment</button>
+</form>
+
+<a href="{% url 'post_detail' post.id %}" class="btn btn-secondary">Back to Post</a>
+{% endblock %}
