@@ -1,10 +1,39 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% block title %} Gamers United - About Us {% endblock %}
 
 {% block content %}
-<h1>
-    About page
-</h1>
+<section>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-8">
+                <div class="card bg-clr-dom-light text-white shadow-sm" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-md-2 mt-md-4 pb-5">
+
+                            <h3 class="fw-bold mb-4 text-uppercase">GAMERS UNITED - Blog Community</h3>
+                            <p class="text-white mb-2 text-sm-center text-md-left">
+                                Welcome to Gamers United, your gateway to the vibrant world of gaming! Our platform serves as a gathering place for gaming enthusiasts, where players and creators unite to celebrate both the art and science of video games. Immerse yourself in our carefully curated reviews that analyze game mechanics, showcase stunning visuals, unveil engaging storylines, and provide a holistic gaming experience.</p><br><br>
+                            <div>
+                                <img class="img-fluid mb-5 rounded-2"
+                                    src="https://res.cloudinary.com/dqk6ad4tr/image/upload/v1730974610/blogger_ulfqup.jpg"
+                                    alt="Responsive image" width="380" height="580">
+                            </div>
+                            <p>At Gamers United, we’re not just a website; we’re a thriving community of passionate gamers sharing insights, opinions, and critiques. Our mission is to empower gamers at all levels—from casual players to dedicated aficionados—by providing a platform for meaningful conversations and diverse perspectives.<br><br>
+
+                                Embark on this epic journey through the gaming universe with us, where every click opens the door to a new adventure and every scroll reveals hidden treasures. Whether you’re on the hunt for your next gaming conquest or looking to express your unique gaming experiences, Gamers United is your ultimate destination.
+                            </p>
+                            {% if not user.is_authenticated %}
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-primary rounded-pill btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                                    href="{% url 'account_signup' %}">Join Now</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
-
-
-
