@@ -26,6 +26,7 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
@@ -42,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'django.contrib.sites',
+    'cloudinary',
     
 
     'allauth',
@@ -57,8 +60,6 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
-    'cloudinary',
-    'cloudinary_storage',
     'djrichtextfield'
 ]
 
@@ -201,7 +202,9 @@ LOGIN_REDIRECT_URL = '/'
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/'),]
+
+print(STATICFILES_DIRS)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
