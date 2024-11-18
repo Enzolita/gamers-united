@@ -15,9 +15,9 @@ from django_resized import ResizedImageField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-# ==============================
+
 # Profile Model
-# ==============================
+
 class UserProfile(models.Model):
     """
     Database model for user's profile
@@ -64,9 +64,9 @@ class UserProfile(models.Model):
         return self.user.username
 
 
-# ==============================
+
 # Category Model
-# ==============================
+
 class GameCategory(models.Model):
     """
     Database model for game categories
@@ -81,9 +81,9 @@ class GameCategory(models.Model):
         return reverse("index")
 
 
-# ==============================
+
 # Post Model
-# ==============================
+
 class Post(models.Model):
     """
     Database model for posts, representing a blog post or article
@@ -133,9 +133,9 @@ class Post(models.Model):
         return reverse("index")
 
 
-# ==============================
+
 # Comment Model
-# ==============================
+
 class Comment(models.Model):
     """
     Database model for comments
