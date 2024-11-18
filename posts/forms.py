@@ -31,6 +31,32 @@ class PostForm(forms.ModelForm):
             ),
         }
 
+    def clean_title(self):
+        title = self.cleaned_data.get("title")
+        if not title or not title.strip():
+            raise ValidationError("Title cannot be empty or contain only spaces.")
+        if len(title) > 50:
+            raise ValidationError("Title cannot be longer than 50 characters.")
+        return title
+
+    def clean_category(self):
+        category = self.cleaned_data.get("category")
+        if not category:
+            raise ValidationError("Category is required.")
+        return category
+
+    def clean_device(self):
+        device = self.cleaned_data.get("device")
+        if not device:
+            raise ValidationError("Device is required.")
+        return device
+
+    def clean_content(self):
+        content = self.cleaned_data.get("content")
+        if not content or not content.strip():
+            raise ValidationError("Content cannot be empty or contain only spaces.")
+        return content
+
 
 class CommentForm(forms.ModelForm):
     """
@@ -41,7 +67,11 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ("body",)
 
-    body = forms.CharField(max_length=300)
+    def clean_body(self):
+        body = self.cleaned_data.get("body")
+        if not body or not body.strip():
+            raise ValidationError("Comment body cannot be empty or contain only spaces.")
+        return body
 
 
 class UserForm(forms.ModelForm):
@@ -77,8 +107,8 @@ class ProfileForm(forms.ModelForm):
             "country",
         ]
         widgets = {
-            "profile_picture": forms.FileInput(),  # forms.FileInput for
-            # custom rendering, removing current url link displayed
+            "profile_picture": forms.FileInput(),
+        
         }
 
 
