@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
+    background-color: #161669;
 }
 
 h1, h2, h3, h4, h5, h6 {
