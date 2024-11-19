@@ -49,6 +49,22 @@ class PostDetail(DetailView):
         return context
 
 
+class GameCategory(ListView):
+    model = Post
+    template_name = 'posts.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        category_id = self.kwargs.get('category_id')
+        category = get_object_or_404(GameCategory, id=category_id)
+        return Post.objects.filter(category=category)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = GameCategory.objects.all()
+        return context
+
+
 # Add a new post
 class AddPost(LoginRequiredMixin, CreateView):
     template_name = "posts/add_post.html"

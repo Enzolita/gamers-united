@@ -7,7 +7,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('djrichtextfield/', include('djrichtextfield.urls')),
     path('', include('home.urls')),
-    path('posts/', include('posts.urls')),  # Include all post-related URLs from posts.urls
+    path('posts/', include('posts.urls')),
     path('about/', About.as_view(), name='about'),
     path('profile/user/<int:id>/', ProfileView.as_view(), name='profile'),
 ]
