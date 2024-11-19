@@ -38,10 +38,10 @@
         const form = document.querySelector('form');
         form.addEventListener('submit', function(event) {
             const titleField = document.querySelector('input[name="title"]');
-            const contentField = document.querySelector('textarea[name="content"]'); // Summernote might create a textarea
+            const contentField = document.querySelector('textarea[name="content"]');
 
-            // For Summernote or other rich-text editors, the content might be in an iframe or div.
-            const contentEditor = document.querySelector('.summernote');  // You might need to adjust this selector based on Summernote's class
+           
+            const contentEditor = document.querySelector('.summernote'); 
             
             let contentValue = contentEditor ? contentEditor.value.trim() : contentField.value.trim();
 

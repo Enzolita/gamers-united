@@ -1,11 +1,21 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
-<h2>Edit Comment</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Update Comment</button>
-</form>
-<a href="{% url 'post_detail' comment.post.id %}">Back to Post</a>
+<div class="container mt-4">
+    <h2>Edit Comment</h2>
+    
+    <!-- Form to Edit Comment -->
+    <form method="POST" action="{% url 'edit_comment' comment.id %}" class="add-comment-form">
+      {% csrf_token %}
+      <div class="form-group">
+          <textarea name="body" class="form-control" rows="4">{{ form.body.value }}</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Update Comment</button>
+  </form>
+
+    <!-- Back Link -->
+    <a href="{% url 'post_detail' comment.post.id %}" class="btn btn-secondary mt-3">Back to Post</a>
+</div>
 {% endblock %}

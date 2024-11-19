@@ -67,6 +67,7 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     form_class = PostForm
     success_url = "/posts/"
+    
 
     def test_func(self):
         return self.request.user == self.get_object().author
@@ -106,7 +107,7 @@ def Add_Comment(request, post_id):
             comment.post = post
             comment.save()
             messages.success(request, "Your comment was added successfully!")
-            return redirect('post_detail', pk=post.slug)
+            return redirect('post_detail', pk=post.id)
     else:
         form = CommentForm()
     return render(request, 'add_comment.html', {'form': form, 'post': post})
@@ -119,10 +120,10 @@ def Edit_Comment(request, comment_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Your comment was updated successfully!")
-            return redirect('post_detail', post_id=comment.post.id)
+            return redirect('post_detail', pk=comment.post.id)
     else:
         form = CommentForm(instance=comment)
-    return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
+    return render(request, 'posts/edit_comment.html', {'form': form, 'comment': comment})
 
 @login_required
 def Delete_Comment(request, comment_id):
@@ -131,5 +132,5 @@ def Delete_Comment(request, comment_id):
     if request.method == 'POST':
         comment.delete()
         messages.success(request, "Your comment was deleted successfully!")
-        return redirect('post_detail', post_id=post_id)
-    return render(request, 'delete_comment.html', {'comment': comment})
+        return redirect('post_detail', pk=post_id)
+    return render(request, 'posts/delete_comment.html', {'comment': comment})

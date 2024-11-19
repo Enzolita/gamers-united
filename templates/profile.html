@@ -34,7 +34,7 @@
                 <a href="{% url 'post_detail' post.id %}">
                     <h3>{{ post.title }}</h3>
                 </a>
-                <p>Posted on: {{ post.created_on|date:"d M Y" }}</p>  <!-- Use 'created_on' -->
+                <p>Posted on: {{ post.created_on|date:"d M Y" }}</p>
                 <hr>
             {% endfor %}
         </div>
