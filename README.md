@@ -14,8 +14,8 @@ Join us in building a space where every gamer’s voice can be heard, and where 
 </center>
 
 
-Developer: [Elena Hanna](https://github.com/KimBergstroem) <br>
-[Live webpage](https://8000-enzolita-gamersunited-3298nwdsxm9.ws.codeinstitute-ide.net/)<br>
+Developer: [Elena Hanna](https://github.com/Enzolita) <br>
+[Live webpage](https://gamers-united-63fd4bb05519.herokuapp.com/)<br>
 [Project Repository](https://github.com/Enzolita/gamers-united)<br>
 
 
@@ -113,7 +113,7 @@ Developer: [Elena Hanna](https://github.com/KimBergstroem) <br>
 Gamers United is a Django web application focused on building a dynamic platform where gamers can share their insights, opinions, cheat codes, and experiences related to various games. The core objectives of this project include:
 The key objectives of the project include:
 
-- **Supporting Gamers:** Creating a dedicated space for gamers to contribute their reviews, articles, and discussions about different games.
+- **Supporting Gamers:** Creating a dedicated space for gamers to contribute their reviews, posts, and discussions about different games.
 - **User Experience:** Providing an engaging and intuitive interface that encourages users to explore content and interact with the community.
 - **Content Organization:** Enabling users to effectively categorize and manage their articles, reviews, and discussions.
 - **User Profiles:** Allowing users to create personalized profiles, highlight their gaming preferences, and track their contributions.
@@ -291,7 +291,7 @@ We’ve designed this space to be your premier gaming hub, where you can engage,
 
 Clicking on your profile image in the navigation bar gives you access to various profile-specific features:
 
-- **My Articles:** The "My articles" page is your personal dashboard. Here, you can view and manage the articles and contributions you've made to **Gamers United**.<br>
+- **My Posts:** The "My Posts" page is your personal dashboard. Here, you can view and manage the posts and contributions you've made to **Gamers United**.<br>
 - **Create Post:** Eager to share your gaming knowledge? The "Create Post" page lets you draft and publish your own articles, contributing your unique insights and experiences to the community. Showcase the tips and tricks you've discovered in your favorite games!<br>
 - **Log Out:** When you're ready to end your session, click "Log Out" to securely exit and transition back to reality after your immersive gaming journey.<br>
 
@@ -352,11 +352,15 @@ Clicking on your profile image in the navigation bar gives you access to various
 - dj-database-url==1.0.0
 - Django==4.1.7
 - django-allauth==0.53.0
+- django-ckeditor==6.7.1
 - django-cloudinary-storage==0.3.0
 - django-crispy-forms==2.0
+- django-js-asset==2.2.0
 - django-reorder==0.2.1
 - django-resized==1.0.2
 - django-richtextfield==1.6.1
+- django-summernote==0.8.20.0
+- gunicorn==20.1.0
 - idna==3.4
 - oauthlib==3.2.2
 - packaging==23.0
@@ -373,6 +377,8 @@ Clicking on your profile image in the navigation bar gives you access to various
 - tomli==2.0.1
 - tzdata==2022.7
 - urllib3==1.26.15
+- whitenoise==6.8.2
+
 
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
 <p align="center">
@@ -419,10 +425,10 @@ For a comprehensive view of the project's trajectory, user stories, and bug trac
 - Visitors can easily navigate to different sections available for unauthorized users of the website through the navigation bar. Visitors can also access our social media through the footer section.<details><summary>See Screenshot **Navbar**</summary><img src="docs/features/navbar.png"></details><details><summary>See Screenshot **Footer**</summary><img src="docs/features/footer.png"></details>
 
 ### Blog Pages:
-- When the user has logged in they will be directed to the Blog main page where they can scroll through blog article cards. <details><summary>See Screenshot **Main**</summary><img src=""></details>
+- When the user has logged in they will be directed to the Blog main page where they can scroll through blog post cards. <details><summary>See Screenshot **Main**</summary><img src=""></details>
 
 ### Blog Detail Page:
-- The blog details page displays comprehensive information about each article, including details about the writer and the article's creation date.<details><summary>See Screenshot **Post detail**</summary><img src=""></details>
+- The blog details page displays comprehensive information about each post, including details about the writer and the post's creation date.<details><summary>See Screenshot **Post detail**</summary><img src=""></details>
 
 - Authors of posts have the privilege to edit or delete their content, ensuring they have control over their contributions.<details><summary>See Screenshot **Editing**</summary><img src=""></details><details><summary>See Screenshot **Delete**</summary><img src=""></details>
 
@@ -452,7 +458,7 @@ For a comprehensive view of the project's trajectory, user stories, and bug trac
 
 - Users can access their profile page, where they can edit, delete, or change their password.<details><summary>See Screenshot **My Profile**</summary><img src=""></details><details><summary>See Screenshot **Update Profile**</summary><img src=""></details><details><summary>See Screenshot **Change Password**</summary><img src=""></details><details><summary>See Screenshot **Delete Account**</summary><img src=""></details>
 
-- Users can view all their articles on a single page. This page will also display all user's Liked articles. If there is no post created or liked, that will be displayed.<details><summary>See Screenshot **My Articles**</summary><img src=""></details><details><summary>See Screenshot **None Articles/Likes**</summary><img src=""></details>
+- Users can view all their posts on a single page. If there is no post created or liked, that will be displayed.<details><summary>See Screenshot **My Posts**</summary><img src=""></details><details><summary>See Screenshot **None Posts/Likes**</summary><img src=""></details>
 
 - Users can also use the "Logout" option to sign out of their accounts. Upon doing so, they will be directed to a confirmation page where they can confirm the logout.<details><summary>See Screenshot **Logout**</summary><img src=""></details>
 
