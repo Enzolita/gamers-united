@@ -72,10 +72,6 @@ footer {
 -------------------------
 
 
-
-
-
-
 -------------------------
 
 
@@ -162,7 +158,14 @@ img.logo{
     box-shadow: var(--smal-box-shadow);
     border-radius: 5px;
     color: white;
+    background-color: #314fd3;
 }
+
+
+form label[for="id_body"] {
+    display: none;
+}
+
 ----------
 /* Style for the comments section */
 .comments-section {
@@ -242,8 +245,10 @@ img.logo{
     color: #555;
 }
 
----------
-
+-----
+.about-card-body {
+    background-color: #5a77f775;
+}
 ----------------------
 /* Posts */
 

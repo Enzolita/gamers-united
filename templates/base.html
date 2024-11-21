@@ -16,9 +16,16 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
-    {% block onload_js %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    {% endblock %}
+    <style>
+        /* Add background image */
+        main {
+            background-image: url("{% static 'images/background.jpg' %}");
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+    </style>
     
     <title>Gamers United - {% block title %}{% endblock %}</title>
 </head>
