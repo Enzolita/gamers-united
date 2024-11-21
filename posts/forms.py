@@ -108,12 +108,5 @@ class ProfileForm(forms.ModelForm):
         ]
         widgets = {
             "profile_picture": forms.FileInput(),
-        
+
         }
-
-
-class ContactForm(forms.Form):
-    name = forms.CharField(max_length=20)
-    email = forms.EmailField(max_length=55)
-    subject = forms.CharField(max_length=100)
-    message = forms.CharField(widget=forms.Textarea)

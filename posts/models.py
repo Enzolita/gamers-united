@@ -15,7 +15,6 @@ from django_resized import ResizedImageField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-
 # Profile Model
 
 class UserProfile(models.Model):
@@ -64,7 +63,6 @@ class UserProfile(models.Model):
         return self.user.username
 
 
-
 # Category Model
 
 class GameCategory(models.Model):
@@ -81,12 +79,11 @@ class GameCategory(models.Model):
         return reverse("index")
 
 
-
 # Post Model
 
 class Post(models.Model):
     """
-    Database model for posts, representing a blog post or article
+    Database model for posts, representing a blog post
     """
 
     author = models.ForeignKey(
@@ -131,7 +128,6 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("index")
-
 
 
 # Comment Model

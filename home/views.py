@@ -17,7 +17,6 @@ class Index(ListView):
         return self.model.objects.all()[:3]
 
 
-
 class About(TemplateView):
     template_name = 'home/about.html'
 
@@ -32,16 +31,15 @@ class ProfileView(LoginRequiredMixin, TemplateView):
         user_id = self.kwargs.get('id')
         user = get_object_or_404(User, id=user_id)
         profile = get_object_or_404(UserProfile, user=user)
-        
-       
-        posts = Post.objects.filter(author=user).order_by('-created_on')  
-        
+
+        posts = Post.objects.filter(author=user).order_by('-created_on')
+
         form = ProfileForm(instance=profile)
-        
+
         context = super().get_context_data(**kwargs)
         context['user'] = user
         context['profile'] = profile
         context['form'] = form
         context['posts'] = posts
-        context['post_count'] = posts.count()  # Total number of posts for the user
+        context['post_count'] = posts.count()
         return context

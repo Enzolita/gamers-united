@@ -30,8 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-'8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
-'gamers-united-63fd4bb05519.herokuapp.com']
+    '8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
+    'gamers-united-63fd4bb05519.herokuapp.com']
 
 
 # Application definition
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    
+
 
     'allauth',
     'allauth.account',
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     # Apps
     'home',
     'posts',
-    
+
 
     # Other
     'crispy_forms',
@@ -126,8 +126,6 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
-
 
 
 WSGI_APPLICATION = 'gamers_united.wsgi.application'
