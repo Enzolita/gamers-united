@@ -12,7 +12,8 @@
         href="https://res.cloudinary.com/dqk6ad4tr/image/upload/v1732094702/favicon.ico.png">
 
     {% block extra_css %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -26,7 +27,7 @@
             color: #fff;
         }
     </style>
-    
+
     <title>Gamers United - {% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -37,9 +38,8 @@
         {% if messages %}
             <div class="messages">
                 {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                    <div class="alert {{ message.tags }} fade show" role="alert">
                         {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 {% endfor %}
             </div>
@@ -54,6 +54,35 @@
     {% include 'includes/footer.html' %}
 
     {% block extra_js %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const alerts = document.querySelectorAll('.alert');
+            
+            // Loop through all alerts
+            alerts.forEach(alert => {
+                // Set a timeout to fade out each alert
+                setTimeout(() => {
+                    alert.classList.remove('show');
+                    alert.classList.add('fade');
+                    
+                    setTimeout(() => {
+                        alert.remove();
+                    }, 500);
+                }, 5000);
+            });
+        });
+
+        // Initialize dropdowns manually
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownElements = document.querySelectorAll('.dropdown-toggle');
+            dropdownElements.forEach((dropdown) => {
+                new bootstrap.Dropdown(dropdown);
+            });
+        });
+    </script>
     {% endblock %}
+
+    <!-- Bootstrap JS Bundle (Includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
