@@ -246,9 +246,6 @@ form label[for="id_body"] {
 }
 
 -----
-.about-card-body {
-    background-color: #5a77f775;
-}
 ----------------------
 /* Posts */
 
@@ -259,6 +256,7 @@ form label[for="id_body"] {
 
 .card-body {
     background: #ffffffde;
+    border-radius: 16px;
 }
 
 .posts {
