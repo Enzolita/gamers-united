@@ -1,8 +1,8 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block title %}Posts{% endblock %}
 
-{% block content %} 
+{% block content %}
     <!-- Display Messages -->
     <div class="container my-3">
         {% if messages %}
@@ -16,30 +16,59 @@
         {% endif %}
     </div>
 
-<h1 class="text-center p-4 mb-4 border-bottom">Latest Posts</h1>
+    <h1 class="text-center p-4 mb-4 border-bottom">Latest Posts</h1>
 
-<!-- Posts Container -->
-<div class="container d-flex flex-wrap justify-content-center">
-    {% for post in posts %} 
-    <a href="{% url 'post_detail' post.id %}" class="text-decoration-none" aria-label="Click to view {{ post.title }}">
-        <div class="card post-card m-3 shadow-sm" style="width: 18rem; border-radius: 10px; overflow: hidden;">
-
-            <!-- Post Image -->
-            {% if post.image %}
-                <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.image_alt }}" style="height: 200px; object-fit: cover;">
-            {% else %}
-                <div class="d-flex align-items-center justify-content-center bg-light" style="height: 200px;">
-                    <p class="text-muted">No image available</p>
-                </div>
-            {% endif %}
-            
-            <!-- Post Content -->
-            <div class="card-body">
-              <h5 class="card-title text-dark fw-bold">{{ post.title }}</h5>
-              <p class="card-text text-muted">{{ post.description|truncatechars:100 }}</p>
-            </div>
+    <!-- Dropdown Menu for Categories -->
+    <div class="container mb-4">
+        <div class="dropdown">
+            <button 
+                class="btn btn-primary dropdown-toggle"
+                type="button" 
+                id="categoriesDropdown" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false">
+                Game Categories
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
+                <!-- Dynamically Rendered Categories -->
+                {% for category in categories %}
+                    <li>
+                        <a class="dropdown-item" href="{% url 'category' category.id %}">
+                            {{ category.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
-    </a>
-    {% endfor %}
-</div>
+    </div>
+
+    <!-- Posts Container -->
+    <div class="container d-flex flex-wrap justify-content-center">
+        {% if posts %}
+            {% for post in posts %}
+                <a href="{% url 'post_detail' post.id %}" class="text-decoration-none" aria-label="Click to view {{ post.title }}">
+                    <div class="card post-card m-3 shadow-sm" style="width: 18rem; border-radius: 10px; overflow: hidden;">
+
+                        <!-- Post Image -->
+                        {% if post.image %}
+                            <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.image_alt }}" style="height: 200px; object-fit: cover;">
+                        {% else %}
+                            <div class="d-flex align-items-center justify-content-center bg-light" style="height: 200px;">
+                                <p class="text-muted">No image available</p>
+                            </div>
+                        {% endif %}
+                        
+                        <!-- Post Content -->
+                        <div class="card-body">
+                            <h5 class="card-title text-dark fw-bold">{{ post.title }}</h5>
+                            <p class="card-text text-muted">{{ post.description|truncatechars:100 }}</p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <!-- Fallback Message -->
+            <p class="text-muted mt-4">No posts available for this category.</p>
+        {% endif %}
+    </div>
 {% endblock %}
