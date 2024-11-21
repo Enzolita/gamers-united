@@ -5,19 +5,20 @@ from django.views.generic import (
     DeleteView,
     UpdateView,
 )
-from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Post, UserProfile
 from .forms import PostForm, ProfileForm
 from django.contrib import messages
+from django.urls import reverse_lazy
 from django.urls import reverse
-from .models import Comment, Post
+from .models import Comment, Post, GameCategory
 from .forms import CommentForm
 
 
-# Display list of posts (with search functionality)
+# Display list of posts
 class Posts(ListView):
     template_name = "posts/posts.html"
     model = Post
@@ -35,8 +36,13 @@ class Posts(ListView):
             posts = self.model.objects.all()
         return posts
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = GameCategory.objects.all()
+        return context
 
-# View a detailed post
+
+# View Post Detail
 class PostDetail(DetailView):
     template_name = "posts/post_detail.html"
     model = Post
@@ -49,20 +55,22 @@ class PostDetail(DetailView):
         return context
 
 
-class GameCategory(ListView):
+class Categories(ListView):
     model = Post
-    template_name = 'posts.html'
+    template_name = 'posts/posts.html'
     context_object_name = 'posts'
 
     def get_queryset(self):
         category_id = self.kwargs.get('category_id')
-        category = get_object_or_404(GameCategory, id=category_id)
-        return Post.objects.filter(category=category)
+        if category_id:
+            return Post.objects.filter(category__id=category_id)
+        return Post.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = GameCategory.objects.all()
         return context
+
 
 
 # Add a new post
@@ -83,7 +91,6 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     form_class = PostForm
     success_url = "/posts/"
-    
 
     def test_func(self):
         return self.request.user == self.get_object().author
@@ -92,10 +99,19 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 # Delete a post
 class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    success_url = "/posts/"
+    success_url = reverse_lazy("posts")
 
     def test_func(self):
+
         return self.request.user == self.get_object().author
+
+    def delete(self, request, *args, **kwargs):
+
+        post = self.get_object()
+
+        response = super().delete(request, *args, **kwargs)
+        messages.success(request, f"The post '{post.title}' was deleted successfully.")
+        return response
 
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -128,6 +144,7 @@ def Add_Comment(request, post_id):
         form = CommentForm()
     return render(request, 'add_comment.html', {'form': form, 'post': post})
 
+
 @login_required
 def Edit_Comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id, user=request.user)
@@ -140,6 +157,7 @@ def Edit_Comment(request, comment_id):
     else:
         form = CommentForm(instance=comment)
     return render(request, 'posts/edit_comment.html', {'form': form, 'comment': comment})
+
 
 @login_required
 def Delete_Comment(request, comment_id):
