@@ -16,7 +16,7 @@ from django.urls import reverse_lazy
 from django.urls import reverse
 from .models import Comment, Post, GameCategory
 from .forms import CommentForm
-
+from django.contrib.messages.views import SuccessMessageMixin
 
 # Display list of posts
 class Posts(ListView):
@@ -86,20 +86,22 @@ class AddPost(LoginRequiredMixin, CreateView):
 
 
 # Edit an existing post
-class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditPost(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     template_name = "posts/edit_post.html"
     model = Post
     form_class = PostForm
     success_url = "/posts/"
+    success_message = "Post succesfully edited!"
 
     def test_func(self):
         return self.request.user == self.get_object().author
 
 
 # Delete a post
-class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class DeletePost(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     model = Post
     success_url = reverse_lazy("posts")
+    success_message = "Post successfully deleted!"
 
     def test_func(self):
 
@@ -110,7 +112,6 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         post = self.get_object()
 
         response = super().delete(request, *args, **kwargs)
-        messages.success(request, f"The post '{post.title}' was deleted successfully.")
         return response
 
 
