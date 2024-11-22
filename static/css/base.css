@@ -21,6 +21,11 @@
      --border: 1px solid #00000030;
 }
 
+main {
+    flex: 1 0 auto;
+    background-color: #161669;
+}
+
 html, body {
     height: 100%;
 }
@@ -42,14 +47,52 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-main {
-    flex: 1 0 auto;
-    background-color: #161669;
+a {
+    color: #ffff;
 }
+
+.landing-page {
+    color: #ffff;
+    font-size: 1.5rem;
+}
+
+.big-text {
+    font-size: 3rem;
+}
+
+.sign-up-h1 {
+    font-size: 3rem;
+}
+
+.sign-up-text {
+    font-size: 1.5rem;
+}
+
+.sign-in-h1 {
+    font-size: 3rem;
+}
+
+.sign-in-text {
+    font-size: 1.5rem;
+}
+
 
 .profile-img {
     width: 500px;
     margin: 0 auto;
+}
+
+#all-posts {
+    z-index: 1000;
+}
+
+#post-images {
+    margin-top: 3rem;
+}
+
+.messages {
+    color: white;
+
 }
 
 /* Footer */
@@ -78,10 +121,10 @@ footer {
 /* Header */
 
 .navbar {
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a light shadow for depth */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-    border-bottom: 2px solid #04349c; /* Bottom border to make it stand out */
+    background: linear-gradient(to right, #1726ac, #0e0ca3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid #04349c;
 }
   
   /* Navbar brand */
@@ -103,24 +146,24 @@ footer {
   
   /* Active Link Styling */
 .navbar-nav .nav-item .nav-link.active {
-    color: #ffffff !important; /* Active links have a distinct color */
+    color: #ffffff !important;
     text-decoration: underline;
 }
   
   /* Navbar item hover effect */
 .navbar-nav .nav-item .nav-link:hover {
     color: #51a9f0 !important;
-    transform: scale(1.1); /* Slight scaling effect on hover */
+    transform: scale(1.1);
     text-decoration: none;
 }
   
   /* Navbar Toggler */
 .navbar-toggler {
-    background-color: #161669; /* Toggler icon background color */
+    background-color: #161669; 
 }
   
 .navbar-toggler-icon {
-    background-color: white; /* Icon color */
+    background-color: white;
 }
   
   /* Responsive Navbar (Collapsible) */
@@ -166,8 +209,8 @@ form label[for="id_body"] {
     display: none;
 }
 
-----------
-/* Style for the comments section */
+/* Comment Section */
+
 .comments-section {
     border-top: 1px solid #ddd;
     padding-top: 20px;
