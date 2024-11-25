@@ -54,7 +54,7 @@ class PostDetail(DetailView):
         context['form'] = CommentForm()
         return context
 
-
+# Game categories
 class Categories(ListView):
     model = Post
     template_name = 'posts/posts.html'
@@ -114,19 +114,22 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, D
         response = super().delete(request, *args, **kwargs)
         return response
 
-
+# Edit a profile
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit a profile"""
-
     form_class = ProfileForm
     model = UserProfile
 
     def form_valid(self, form):
-        self.success_url = f'/profile/user/{self.kwargs["pk"]}/'
+        self.success_url = reverse("profile", kwargs={"id": self.kwargs["id"]})
         return super().form_valid(form)
 
     def test_func(self):
         return self.request.user == self.get_object().user
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(UserProfile, user_id=self.kwargs["id"])
+
 
 
 @login_required

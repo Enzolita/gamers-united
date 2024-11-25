@@ -17,6 +17,7 @@
             <h1>{{ profile.user.username }}</h1>
             <p><strong>Joined:</strong> {{ profile.user.date_joined|date:'d M Y' }}</p>
             <p><strong>Total Posts:</strong> {{ post_count }}</p>
+            <p><strong>Country:</strong> {{ profile.country }}</p>
             {% if profile.bio %}
                 <p>{{ profile.bio|safe }}</p>
             {% endif %}
