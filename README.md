@@ -153,7 +153,7 @@ Gamers United caters to:
 - Passionate gamers and enthusiasts seeking detailed game insights and reviews.
 - Individuals eager to explore a wide range of gaming experiences and genres.
 - Users interested in sharing their own game reviews, opinions, and personal experiences.
-- Players looking for a platform to engage in discussions about their favorite titles.
+- Players looking for a platform to engage in discussions about their favorite games.
 - Those who want to keep up with the latest trends and conversations in the gaming world.
 
 
@@ -162,48 +162,30 @@ Gamers United caters to:
 Users of **Gamers United** can anticipate the following features and attributes to meet their needs:
 
 - An intuitive and user-friendly interface that facilitates easy navigation and access to gaming content.
-- In-depth game reviews and articles that provide thorough analysis and opinions.
+- In-depth game reviews and posts that provide thorough analysis and opinions.
 - A responsive design that ensures an attractive and functional experience across various devices.
 - Personalized elements, such as user profiles, that highlight gaming preferences and track individual contributions.
 - Opportunities for interactive participation through comments and discussions to build a strong community.
 - Timely notifications about new content and discussions to keep users updated and engaged.
 
-**Gamers United** is dedicated to offering an engaging and immersive platform for users to explore, share, and discuss their love for gaming.
+**Gamers United** is dedicated to offering an engaging and immersive platform for users to explore, share, and discuss their passion for gaming.
 
 
-### User Stories
+# User Stories
 
-#### Epic 1: User Experience (Visitor)
-
-- [Easily Navigate and Find Content (should-have)](---) #1 SPRINT 2
-- [Visually Appealing Homepage (should-have)](--) #2 SPRINT 2
-- [Search for Specific Games or Topics (could-have)](--) #3 SPRINT 2
-- [Create a Personalized Profile (should-have)](--) #5 SPRINT 3
-
-#### Epic 2: User Engagement and Interaction (Registered User)
-
-- [Read Detailed Game Reviews (should-have)](--) #4 SPRINT 3
-- [Save Favorite Articles and Create Reading Lists (should-have)](--) #6 SPRINT 3
-- [Receive Notifications (could-have)](--) #7 SPRINT 4
-- [Leave Comments and Engage in Discussions (must-have)](--) #8 SPRINT 4
-- [Submit Own Articles and Reviews (must-have)](--) #9 SPRINT 4
-- [Edit or Delete Own Articles and Comments (must-have)](--) #10 SPRINT 4
-- [Earn Badges or Rewards (won't-have)](--) #11 SPRINT 4
-- [Create Personalized Gaming Profile (should-have)](--) #16 SPRINT 4
-- [Save Favorite Articles and Create Reading List (could-have)](--) #17 SPRINT 3
-
-#### Epic 3: Administration and Content Management (Admin/Content Moderator)
-
-- [Full Control Over User Accounts (must-have)](--) #12 SPRINT 4
-- [Review and Edit User-Submitted Articles (must-have)](--) #13 SPRINT 4
-- [Manage and Categorize Articles (could-have)](--) #14 SPRINT 4
-- [Track User Engagement and Analytics (could-have)](--) #15 SPRINT 4
+### Agile Planning and Development
 
 <br>
 
-The user stories and epics are organized into four distinct sprints (milestones) to establish a well-defined work structure. You can access the details of these sprints by clicking [here](--), which will redirect you to the sprint information.
+At Gamers United, our planning and development process is guided by Agile methodologies and principles. While we don't strictly follow traditional Agile frameworks like scheduled sprints or scrums, we emphasize flexibility, continuous improvement, and swift adaptation to change. Instead of focusing on sprints, we prioritize developing epics that align with backend applications, addressing User Stories based on their priority.
 
-![Sprints](--) 
+Our overarching strategy divides the project into three key phases: planning, development (which includes unit and functional testing), and continuous deployment. Documentation is created, reviewed, and updated throughout the process. Our approach is straightforward: we develop features in a logical order, prioritizing core functionalities before moving on to more complex aspects.
+
+We actively seek and analyze user feedback to pinpoint areas for improvement, ensuring that our product continuously evolves to meet user needs and expectations effectively.
+
+We used a project [kanban board](https://github.com/users/Enzolita/projects/7) to track progress.
+
+<br>
 
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
 <p align="center">
