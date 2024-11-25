@@ -28,7 +28,7 @@ Developer: [Elena Hanna](https://github.com/Enzolita) <br>
 ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
 ![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
 ![JSS Badge](https://img.shields.io/badge/JSS-F7DF1E?logo=jss&logoColor=000&style=for-the-badge)
-![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)docs/wireframes/phone wireframe.png
+![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)
 ![Markdown Badge](https://img.shields.io/badge/Markdown-000?logo=markdown&logoColor=fff&style=for-the-badge)
 
 ![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff&style=for-the-badge)
@@ -110,34 +110,34 @@ Developer: [Elena Hanna](https://github.com/Enzolita) <br>
 
 # Project Goals 
 
-Gamers United is a Django web application focused on building a dynamic platform where gamers can share their insights, opinions, cheat codes, and experiences related to various games. The core objectives of this project include:
-The key objectives of the project include:
+Gamers United is a web application built with Django, designed to offer a vibrant platform for gamers to connect and share their knowledge, tips, cheat codes, and personal gaming experiences. This project focuses on the following key goals:
+This project focuses on the following key goals:
 
 - **Supporting Gamers:** Creating a dedicated space for gamers to contribute their reviews, posts, and discussions about different games.
-- **User Experience:** Providing an engaging and intuitive interface that encourages users to explore content and interact with the community.
-- **Content Organization:** Enabling users to effectively categorize and manage their articles, reviews, and discussions.
-- **User Profiles:** Allowing users to create personalized profiles, highlight their gaming preferences, and track their contributions.
-- **Active Participation:** Encouraging user interactions through comments, reviews, and discussions to build a strong sense of community.
-- **Administrator Control:** Giving administrators the tools to manage user accounts, moderate content, and maintain a safe environment.
+- **Seamless User Experience:** Delivering an intuitive and engaging interface that encourages exploration and active participation within the community.
+- **Content Organization:**  Allowing users to organize and manage their posts, reviews, and discussions effectively.
+
+- **Personalized Profiles:** Enabling users to showcase their gaming interests, track contributions, and customize their profiles.
+- **Community Engagement:** Fostering meaningful interactions through comments, discussions, and collaborative reviews to strengthen the community spirit.
+- **Administrative Oversight:**  Equipping administrators with tools to manage user accounts, moderate content, and ensure a safe and welcoming environment.
 
 
 ### User Goals
-- Exploring and sharing detailed game reviews and articles.
+- Exploring and sharing detailed game reviews and posts.
 - Personalizing their profiles to showcase their gaming interests.
 - Engaging in discussions and leaving comments to contribute to the gaming community.
-- Saving favorite articles and reviews for easy access.
-- Submitting their own game reviews, articles, and insights.
+- Submitting their own game reviews, posts, and perspectives.
 
 
 ### Site Owner Goals
 
-- Offering a space for gamers to share their perspectives and insights.
+- Offering a space for gamers to share their perspectives and thoughts.
 - Curating a wide variety of gaming content to meet diverse tastes.
 - Building a vibrant gaming community where users can connect and exchange experiences.
 - Moderating user-generated content to maintain quality and appropriateness.
 - Boosting user interaction and engagement through intuitive design and features.
 
- Project **Gamers United** is dedicated to developing a vibrant community where gamers can connect, share, and delve into the gaming world through thoughtful articles, discussions, and reviews.
+ Project **Gamers United** is dedicated to developing a vibrant community where gamers can connect, share, and delve into the gaming world through thoughtful posts, discussions, and reviews.
 
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
 <p align="center">
