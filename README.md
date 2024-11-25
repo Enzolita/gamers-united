@@ -231,15 +231,15 @@ This database schema defines the structure and relationships for a blog applicat
 </p>
 
 # Design
-In the world of **Gamers United**, the design philosophy revolves around creating a modern and streamlined user interface that highlights gaming insights. Drawing inspiration from the immersive environments of video games, the aim is to offer a visually engaging experience. The primary objective is to ensure effortless navigation, discovery, and interaction with a rich array of gaming articles.
+In the world of **Gamers United**, the design philosophy revolves around creating a modern and streamlined user interface that highlights gaming reviews. Drawing inspiration from the immersive environments of video games, the aim is to offer a visually engaging experience. The primary objective is to ensure effortless navigation, discovery, and interaction with a rich array of gaming posts.
 
 ### Design Choices
 Our design choices were thoughtfully made with gamers at the forefront, resulting in an environment that authentically reflects the spirit of the gaming community.
 
 ### Color
-The goal with the colors are to make it a cozy environment with a gradient background that includes different shades.
+The color scheme aims to evoke a cozy and welcoming atmosphere, featuring a dark, earth-inspired background symbolizing the unity of gamers from all around the world. Hence Gamers United.
 
-![Color Palette image](--)
+![Color Palette image](docs/readme_images/color_palette.png)
 
 
 
