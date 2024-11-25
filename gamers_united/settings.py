@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
@@ -60,24 +60,27 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
-    'djrichtextfield'
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 
 SITE_ID = 1
 
-DJRICHTEXTFIELD_CONFIG = {
-    'js': ['//cdn.ckeditor.com/4.14.0/standard/ckeditor.js'],
-    'init_template': 'djrichtextfield/init/ckeditor.js',
-    'settings': {
-        'toolbar': [
-            ['Format', 'Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList'], ['Undo', 'Redo'],
-            ['Maximize']
-        ],
-        'format_tags': 'p;h1;h2;h3'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
     }
 }
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
