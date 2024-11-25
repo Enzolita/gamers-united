@@ -1,4 +1,3 @@
-# Gamers United
 # Gamers United - Your Ultimate Gaming Hub
 
 Welcome to **Gamers United**, a gaming blog designed for enthusiasts to share their love for video games. Whether you're into analyzing the intricacies of game mechanics, reviewing the latest titles, or simply discussing your favorite gaming moments, this platform has something for everyone. 
@@ -102,11 +101,7 @@ Developer: [Elena Hanna](https://github.com/Enzolita) <br>
   + [Content](#content)
 - 📄[Acknowledgments](#acknowledgments)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc and modified by myself</a></i></small>
 
-<p align="center">
-  <img src="docs/readme.md/readme-divider3.png" />
-</p>
 
 # Project Goals 
 
@@ -140,9 +135,6 @@ This project focuses on the following key goals:
  Project **Gamers United** is dedicated to developing a vibrant community where gamers can connect, share, and delve into the gaming world through thoughtful posts, discussions, and reviews.
 
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
-<p align="center">
-  <img src="docs/readme.md/readme-divider3.png" />
-</p>
 
 # User Experience
 
@@ -166,7 +158,7 @@ Users of **Gamers United** can anticipate the following features and attributes 
 - A responsive design that ensures an attractive and functional experience across various devices.
 - Personalized elements, such as user profiles, that highlight gaming preferences and track individual contributions.
 - Opportunities for interactive participation through comments and discussions to build a strong community.
-- Timely notifications about new content and discussions to keep users updated and engaged.
+
 
 **Gamers United** is dedicated to offering an engaging and immersive platform for users to explore, share, and discuss their passion for gaming.
 
@@ -186,6 +178,7 @@ We actively seek and analyze user feedback to pinpoint areas for improvement, en
 We used a project [kanban board](https://github.com/users/Enzolita/projects/7) to track progress.
 
 <br>
+
 
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
 <p align="center">
@@ -226,9 +219,7 @@ When creating the database structure schema for this project, I utilized the [lu
 <br>
 This database schema defines the structure and relationships for a blog application, including users, posts, comments, user profiles, game categories.
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
-<p align="center">
   
-</p>
 
 # Design
 In the world of **Gamers United**, the design philosophy revolves around creating a modern and streamlined user interface that highlights gaming reviews. Drawing inspiration from the immersive environments of video games, the aim is to offer a visually engaging experience. The primary objective is to ensure effortless navigation, discovery, and interaction with a rich array of gaming posts.
@@ -256,7 +247,7 @@ The website is designed with a user-friendly structure to ensure smooth navigati
 - **Landing Page:** The landing page introduces visitors to **Gamers United**, showcasing the platform and highlighting the engaging content and features available.<br>
 - **About Us:** The About Us page offers insight into **Gamers United**, including our mission, values, and the advantages of being part of our active gaming community.<br>
 - **Sign Up:** New users can quickly create an account on the Join Us page by providing the necessary information to join **Gamers United**.<br>
-- **Log In:** Existing users can access their accounts and explore the full range of features by logging in through this page.<br>
+- **Log In:** Existing users can access their accounts and explore the full range of features by logging in through Log In page.<br>
 
 
 #### After Logging In:
@@ -265,21 +256,19 @@ Once you're logged into **Gamers United**, you'll be immersed in our vibrant gam
 
 - **Home Page (Gamer's Hub):** This is your gateway to the latest gaming blog posts. The Gamer's Hub serves as a central hub, offering a rich array of gaming articles and content.<br>
 - **Profile Page:** Here, you can manage your gaming identity. Display your bio, showcase your achievements, and personalize your avatar. Tailor your profile settings to reflect your unique gaming persona.<br>
-- **Contact Us:** Should you have any questions or encounter issues, our support team is ready to help. Reach out via the "Contact Us" page for assistance with any concerns or inquiries.<br>
 
-We’ve designed this space to be your premier gaming hub, where you can engage, explore, and exchange insights with other gaming enthusiasts.
+We’ve designed this space to be your premier gaming hub, where you can engage, explore, and exchange thoughts with other gaming enthusiasts.
 
 #### Profile Navigation:
 
-Clicking on your profile image in the navigation bar gives you access to various profile-specific features:
+Clicking on profile in the navigation bar gives you access to various profile-specific features:
 
-- **My Posts:** The "My Posts" page is your personal dashboard. Here, you can view and manage the posts and contributions you've made to **Gamers United**.<br>
-- **Create Post:** Eager to share your gaming knowledge? The "Create Post" page lets you draft and publish your own articles, contributing your unique insights and experiences to the community. Showcase the tips and tricks you've discovered in your favorite games!<br>
+- **Posts:** --
+- **Profile:** The "Profile" page is your personal dashboard. Here, you can view and manage the posts and contributions you've made to **Gamers United**.<br>
+- **Add Post:** Eager to share your gaming knowledge? The "Add Post" page lets you draft and publish your own articles, contributing your unique insights and experiences to the community. Showcase the tips and tricks you've discovered in your favorite games!<br>
 - **Log Out:** When you're ready to end your session, click "Log Out" to securely exit and transition back to reality after your immersive gaming journey.<br>
 
 ### Wireframes
-
-
 
 <details><summary>Create Post View</summary>
 <img src="docs/wireframes/wireframe.png">
@@ -298,6 +287,7 @@ Clicking on your profile image in the navigation bar gives you access to various
 ### Languages
 - HTML
 - CSS
+- JavaScript
 - Python
 
 ### Frameworks
@@ -402,21 +392,19 @@ For a comprehensive view of the project's trajectory, user stories, and bug trac
 
 # Features
 ### Landing Page:
-- On the landing page, a prominent blue call-to-action button invites users to register and join our exclusive VIP blogging community. Additionally, a captivating hero image featuring a magic book is strategically positioned to immediately capture the user's attention and evoke the essence of the blogging experience.<details><summary>See Screenshot **Landingpage**</summary><img src="docs/features/landing-page.png"></details>
+- On the landing page, a prominent white call-to-action button invites users to register and join our exclusive VIP blogging community. Additionally, a captivating image of the community's logo is strategically positioned to immediately capture the user's attention and evoke the essence of the blogging experience.<details><summary>See Screenshot **Landingpage**</summary><img src="docs/features/homepage-unauth.png"></details>
 
-- Visitors can easily navigate to different sections available for unauthorized users of the website through the navigation bar. Visitors can also access our social media through the footer section.<details><summary>See Screenshot **Navbar**</summary><img src="docs/features/navbar.png"></details><details><summary>See Screenshot **Footer**</summary><img src="docs/features/footer.png"></details>
+- Visitors can easily navigate to different sections available for unauthorized users of the website through the navigation bar. Visitors can also access our social media through the footer section.<details><summary>See Screenshot **Navbar**</summary><img src="docs/features/navbar-unauth.png"></details><details><summary>See Screenshot **Footer**</summary><img src="docs/features/footer.png"></details>
 
-### Blog Pages:
-- When the user has logged in they will be directed to the Blog main page where they can scroll through blog post cards. <details><summary>See Screenshot **Main**</summary><img src=""></details>
+### Home Page:
+- When the user has logged in they will be directed to the authenticated home page with a success message "succesfully signed in as user". <details><summary>See Screenshot **Main**</summary><img src="docs/features/homepage_auth.png"></details>
 
-### Blog Detail Page:
-- The blog details page displays comprehensive information about each post, including details about the writer and the post's creation date.<details><summary>See Screenshot **Post detail**</summary><img src=""></details>
+### Post Detail Page:
+- The post details page displays comprehensive information about each post, including details about the writer and the post's creation date.<details><summary>See Screenshot **Post detail**</summary><img src="docs/features/post_detail_page.png"></details>
 
-- Authors of posts have the privilege to edit or delete their content, ensuring they have control over their contributions.<details><summary>See Screenshot **Editing**</summary><img src=""></details><details><summary>See Screenshot **Delete**</summary><img src=""></details>
+- Authors of posts have the privilege to edit or delete their content, ensuring they have control over their contributions.<details><summary>See Screenshot **Editing**</summary><img src="docs/features/edit_post.png"></details><details><summary>See Screenshot **Delete**</summary><img src="docs/features/delete_post.png"></details>
 
-- Users can express their appreciation for a well-written blog post by liking it, which not only supports the author but also recognizes the quality of the content.<details><summary>See Screenshot **Like**</summary><img src=""></details>
-
-- Users can actively participate in the community by leaving comments on recipes. This provides a platform for sharing thoughts, suggestions, and feedback, fostering a vibrant and engaging community. Users also have the option to delete comments.<details><summary>See Screenshot **Comment**</summary><img src=""></details>
+- Users can actively participate in the community by leaving comments on recipes. This provides a platform for sharing thoughts, suggestions, and feedback, fostering a vibrant and engaging community. Users also have the option to delete comments.<details><summary>See Screenshot **Comment**</summary><img src="docs/features/comment.png"></details>
 
 ### User Account Management:
 - The account sign-up form allows new users to create an account and join the Gamers United community. The form has validation to make sure that the user enters the correct information needed. This is a Django built-in validation system. Such validation is:
@@ -424,31 +412,27 @@ For a comprehensive view of the project's trajectory, user stories, and bug trac
     - **Username**: Required and has a maximum of 150 characters or fewer. Only letters, digits, and @/./+/-/_ are allowed.
     - **Email**: Required and must be in a valid email format.
     - **Password**: Subject to the following constraints:
-        - Cannot be too similar to your other personal information.
         - Must contain at least 8 characters.
         - Cannot be a commonly used password.
         - Cannot be entirely numeric.
-    - See Screenshot<details><summary>**SIGNUP VALIDATION**</summary><img src=""></details>
+    - See Screenshot<details><summary>**SIGNUP VALIDATION**</summary><img src="docs/features/sign_up_validation.png"></details>
 
 - The login form ensures secure access to Gamers United by verifying your username and password. If you face login issues, use the 'Forgot Password?' link to reset your password. The form also displays validation error messages to guide you through any input errors.
-    - See Screenshot<details><summary>**LOGIN VALIDATION**</summary><img src="docs/features/sign-in.png"></details>
+    - See Screenshot<details><summary>**LOGIN VALIDATION**</summary><img src="docs/features/sign_in_validation.png"></details>
 
 
-- When an account is successfully created, the user will receive a confirmation message and gain access to the profile menu.<details><summary>See Screenshot **Success**</summary><img src=""></details>
+- When an account is successfully created, the user will receive a confirmation message and gain access to the profile menu.<details><summary>See Screenshot **Success**</summary><img src="docs/features/success_sign.png"></details>
 
-- Users can create posts.<details><summary>See Screenshot **Create Post**</summary><img src="docs/features/add-post.png"></details>
+- Users can create posts.<details><summary>See Screenshot **Create Post**</summary><img src="docs/features/add_post.png"></details>
 
-- Users can access their profile page, where they can edit, delete, or change their password.<details><summary>See Screenshot **My Profile**</summary><img src=""></details><details><summary>See Screenshot **Update Profile**</summary><img src=""></details><details><summary>See Screenshot **Change Password**</summary><img src=""></details><details><summary>See Screenshot **Delete Account**</summary><img src=""></details>
+- Users can access their profile page, where they can edit, delete, or change their password, users can view all their posts too.<details><summary>See Screenshot **My Profile**</summary><img src="docs/features/profile-page.png"></details><details><summary>See Screenshot **Edit Profile**</summary><img src="docs/features/edit_profile.png">
 
-- Users can view all their posts on a single page. If there is no post created or liked, that will be displayed.<details><summary>See Screenshot **My Posts**</summary><img src=""></details><details><summary>See Screenshot **None Posts/Likes**</summary><img src=""></details>
-
-- Users can also use the "Logout" option to sign out of their accounts. Upon doing so, they will be directed to a confirmation page where they can confirm the logout.<details><summary>See Screenshot **Logout**</summary><img src=""></details>
+- Users can also use the "Logout" option to sign out of their accounts. Upon doing so, they will be directed to a confirmation page where they can confirm the logout.<details><summary>See Screenshot **Logout**</summary><img src="docs/features/sign_out.png"></details>
 
 
 ### Navigation:
-- The navigation bar provides convenient access to various sections and pages of Gamers United, dynamically adjusting its options based on the user's authorization status. Authorized users also have the ability to submit queries to Gamers United using the Contact Us form. Users will have a confirmation message when successfully submit the form.<details><summary>See Screenshot **Contact Us**</summary><img src=""></details><details><summary>See Screenshot **Contact Us Submitted**</summary><img src=""></details>
 
-- Both unauthorized and authorized users have access to the About Us page. However, depending on whether you are logged in or not, the call-to-action button displayed varies between "Log In" and "Create Post."<details><summary>See Screenshot **About Us Authorized**</summary><img src=""></details><details><summary>See Screenshot **About Us Unauthorized**</summary><img src=""></details>
+- Both unauthorized and authorized users have access to the About Us page. However, depending on whether you are logged in or not, the call-to-action button varies between "Join now" and is gone when logged in<details><summary>See Screenshot **About Us Authorized**</summary><img src="docs/features/about_us_auth.png"></details><details><summary>See Screenshot **About Us Unauthorized**</summary><img src="docs/features/about-us-unath.png"></details>
 
 - On smaller screens, the navigation bar collapses into a burger menu, allowing for a compact and mobile-friendly navigation experience. Users can access the menu by clicking on the burger icon, which reveals the navigation options in a dropdown fashion.
 
@@ -490,18 +474,6 @@ All testing, including both manual and automated testing, was carried out and do
 </p>
 
 # Bugs
---
-
-### Known bugs
-
-| **Bug** | **Description** |
-| ------- | --------------- |
-| [-](http) | ---- |
-| [-](http) | ---- |
-| [-](https) | ----- |
-| [-](http) | ---- |
-| [-](http) | ---- |
-
 
 
 ### Fixed bugs
