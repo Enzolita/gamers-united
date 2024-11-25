@@ -217,14 +217,14 @@ When creating the database structure schema for this project, I utilized the [lu
 
 #### Post Table
 - Represents blog posts created by users.
-- Fields: post_id (primary key), title (post title), slug (post slug), author_id (foreign key to User), update_on (post update date), content (post content), featured_image (featured image URL), excerpt (post excerpt), Created_on (post creation date), status (post status), likes (many-to-many relationship with User for post likes), category_id (foreign key to GameCategory), device (post device 'PC', 'XBOX', 'PLAYSTATION', 'NITENDO', Charfield).
+- Fields: post_id (primary key), title (post title), slug (post slug), author_id (foreign key to User), update_on (post update date), content (post content), featured_image (featured image URL), excerpt (post excerpt), Created_on (post creation date), status (post status), likes (many-to-many relationship with User for post likes), category_id (foreign key to GameCategory), device (post device 'PC', 'XBOX', 'PLAYSTATION', 'NITENDO-SWITCH', Charfield).
 
 #### Comment Table
 - Represents comments on blog posts.
 - Fields: comment_id (primary key), post_id (foreign key to Post), name (commenter's name), email (commenter's email address), body (comment content), created_on (comment creation date), approved (comment approval status), user_id (foreign key to user model).
 
 <br>
-This database schema defines the structure and relationships for a blog application, including users, posts, comments, user profiles, game categories, and follower relationships.
+This database schema defines the structure and relationships for a blog application, including users, posts, comments, user profiles, game categories.
 <p align="right">(<a href="#table-of-content">back to top</a>)</p>
 <p align="center">
   
