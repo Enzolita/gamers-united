@@ -40,21 +40,6 @@ class UserProfile(models.Model):
     )
     country = models.CharField(max_length=30, default="Digital Citizen", blank=True)
 
-    @receiver(post_save, sender=User)
-    def create_user_profile(sender, instance, created, **kwargs):
-        """
-        Automatically create a profile when a User instance is created
-        """
-        if created:
-            UserProfile.objects.create(user=instance)
-
-    @receiver(post_save, sender=User)
-    def save_user_profile(sender, instance, **kwargs):
-        """
-        Save the user profile when the associated User instance is saved
-        """
-        instance.userprofile.save()
-
     def __str__(self):
         """
         Returns a string representation of the user's profile
@@ -62,6 +47,20 @@ class UserProfile(models.Model):
         """
         return self.user.username
 
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+        """
+        Automatically create a profile when a User instance is created
+        """
+        if created:
+            UserProfile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+        """
+        Save the user profile when the associated User instance is saved
+        """
+        instance.userprofile.save()
 
 # Category Model
 
