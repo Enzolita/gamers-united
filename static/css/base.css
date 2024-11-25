@@ -106,16 +106,52 @@ footer {
     justify-content: center;
     align-items: center;
     border-top: var(--border);
+    padding: 0.3rem;
 }
 
 .social-icon {
     height: 2rem;
     margin: 1rem;
 }
--------------------------
+
+/* Modal Background */
+
+#myModal {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: none;
+    z-index: 1050;
+}
+
+#myModal .modal-content {
+    background-color: #102a9d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15% auto;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 
--------------------------
+#myModal .close {
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#myModal .close:hover,
+#myModal .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 /* Header */
@@ -201,7 +237,7 @@ img.logo{
     box-shadow: var(--smal-box-shadow);
     border-radius: 5px;
     color: white;
-    background-color: #314fd3;
+    background-color: #102a9d;
 }
 
 
