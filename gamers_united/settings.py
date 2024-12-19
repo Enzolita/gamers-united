@@ -27,10 +27,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-enzolita-gamersunited-9sc8wk0a5l4.ws.codeinstitute-ide.net',
+    '8000-enzolita-gamersunited-2vwbdatqsuq.ws.codeinstitute-ide.net',
     'gamers-united-63fd4bb05519.herokuapp.com']
 
 
