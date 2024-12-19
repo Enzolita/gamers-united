@@ -99,7 +99,6 @@ class Post(models.Model):
         size=[400, None],
         quality=75,
         upload_to="posts/",
-        force_format="WEBP",
         blank=True,
         null=True,
     )
