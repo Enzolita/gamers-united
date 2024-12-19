@@ -323,8 +323,14 @@ form label[for="id_body"] {
     color: #555;
 }
 
------
-----------------------
+/* Button */
+
+a.btn.btn-outline-secondary {
+    color: rgb(255, 255, 255);
+    background-color: grey;
+}  
+
+
 /* Posts */
 
 .card {
