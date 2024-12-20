@@ -19,6 +19,8 @@ from .forms import CommentForm
 from django.contrib.messages.views import SuccessMessageMixin
 
 # Display list of posts
+
+
 class Posts(ListView):
     template_name = "posts/posts.html"
     model = Post
@@ -55,6 +57,8 @@ class PostDetail(DetailView):
         return context
 
 # Game categories
+
+
 class Categories(ListView):
     model = Post
     template_name = 'posts/posts.html'
@@ -72,7 +76,6 @@ class Categories(ListView):
         return context
 
 
-
 # Add a new post
 class AddPost(LoginRequiredMixin, CreateView):
     template_name = "posts/add_post.html"
@@ -86,7 +89,9 @@ class AddPost(LoginRequiredMixin, CreateView):
 
 
 # Edit an existing post
-class EditPost(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView):
+class EditPost(LoginRequiredMixin, UserPassesTestMixin,
+               SuccessMessageMixin, UpdateView):
+
     template_name = "posts/edit_post.html"
     model = Post
     form_class = PostForm
@@ -98,7 +103,9 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, Upd
 
 
 # Delete a post
-class DeletePost(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, DeleteView):
+
+class DeletePost(LoginRequiredMixin, UserPassesTestMixin,
+                 SuccessMessageMixin, DeleteView):
     model = Post
     success_url = reverse_lazy("posts")
     success_message = "Post successfully deleted!"
@@ -115,6 +122,8 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, D
         return response
 
 # Edit a profile
+
+
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit a profile"""
     form_class = ProfileForm
@@ -129,7 +138,6 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def get_object(self, queryset=None):
         return get_object_or_404(UserProfile, user_id=self.kwargs["id"])
-
 
 
 @login_required
@@ -160,7 +168,8 @@ def Edit_Comment(request, comment_id):
             return redirect('post_detail', pk=comment.post.id)
     else:
         form = CommentForm(instance=comment)
-    return render(request, 'posts/edit_comment.html', {'form': form, 'comment': comment})
+    return render(request, 'posts/edit_comment.html', {'form': form,
+                                                       'comment': comment})
 
 
 @login_required

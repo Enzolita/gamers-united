@@ -27,14 +27,16 @@ class PostForm(forms.ModelForm):
             "device": forms.Select(attrs={"class": "form-control"}),
             "content": SummernoteWidget(attrs={"class": "form-control"}),
             "title": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Max 50 characters"}
+                attrs={"class": "form-control",
+                       "placeholder": "Max 50 characters"}
             ),
         }
 
     def clean_title(self):
         title = self.cleaned_data.get("title")
         if not title or not title.strip():
-            raise ValidationError("Title cannot be empty or contain only spaces.")
+            raise ValidationError
+            ("Title cannot be empty or contain only spaces.")
         if len(title) > 50:
             raise ValidationError("Title cannot be longer than 50 characters.")
         return title
@@ -54,7 +56,8 @@ class PostForm(forms.ModelForm):
     def clean_content(self):
         content = self.cleaned_data.get("content")
         if not content or not content.strip():
-            raise ValidationError("Content cannot be empty or contain only spaces.")
+            raise ValidationError
+            ("Content cannot be empty or contain only spaces.")
         return content
 
 
@@ -70,7 +73,8 @@ class CommentForm(forms.ModelForm):
     def clean_body(self):
         body = self.cleaned_data.get("body")
         if not body or not body.strip():
-            raise ValidationError("Comment body cannot be empty or contain only spaces.")
+            raise ValidationError
+        ("Comment body cannot be empty or contain only spaces.")
         return body
 
 
