@@ -324,7 +324,6 @@ Clicking on profile in the navigation bar gives you access to various profile-sp
 - dj-database-url==1.0.0
 - Django==4.1.7
 - django-allauth==0.53.0
-- django-ckeditor==6.7.1
 - django-cloudinary-storage==0.3.0
 - django-crispy-forms==2.0
 - django-js-asset==2.2.0
