@@ -628,4 +628,11 @@ The recommended [CI Python Linter](https://pep8ci.herokuapp.com) was to validate
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
-      <tr>
+## ISSUES
+
+### Solved Issues
+
+1. Adding a post with an image <br> ![x](docs/testing/debug_solved.png) <br>
+By removing the force_format="WEBP" the CRUD issue was solved.
+
+*<span style="color: blue;">[Back to Content](#content)</span>*
