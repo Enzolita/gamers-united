@@ -19,6 +19,40 @@ Return back to the [README.md](README.md) file.
     - [Unsolved issue](#unsolved-issue)
     - [Known issue](#known-issue)
 
+## Testing overview & environment
+
+Testing was ongoing throughout the entire development. I used the various linters and GITPOD terminal output whilst building to pinpoint and troubleshoot any issues as I went along.
+
+### Test environment
+
+* Desktop:
+  * Self built PC
+* Screen:
+  * Samsung Odyssey G5 / 32" / 2560 x 1440 /
+* Mobile:
+  * Iphone 13 PRO
+
+### Browser compatibility
+
+* Google Chrome, version 121.0.6167.86 (Official Build) (64-bit)
+* Edge, version 123.0.2420.97 (Official build) (64-bit)
+
+### Responsiveness
+
+App is fully responsive on breakpoints supported by Bootstrap 5.3.3.
+
+| **Breakpoint** | **Prefix** | **Minimum Width** |
+|----------------|------------|-------------------|
+| Extra Small    | `xs`       | `< 576px`         |
+| Small          | `sm`       | `≥ 576px`         |
+| Medium         | `md`       | `≥ 765px`         |
+| Large          | `lg`       | `≥ 992px`         |
+| Extra Large    | `xl`       | `≥ 1200px`        |
+| Extra Extra Large | `xxl`   | `≥ 1400px`        |
+
+
+*<span style="color: blue;">[Back to Content](#content)</span>*
+
 ## Automated Testing
 
 - **HTML Validation**: Used the [W3C HTML Validator](https://validator.w3.org/) which returned the following results:
