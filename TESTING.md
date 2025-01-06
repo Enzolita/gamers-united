@@ -1,11 +1,23 @@
 # Gamers United Testing
 ![Gamers United viewed in different screens](/docs/readme_images/responsive.png)
-[Automated Testing](#automated-testing)
 
-- [Lighthouse Scores](#lighthouse-scores)
-- [Running Tests](#running-tests)
+Return back to the [README.md](README.md) file.
 
-[Manual Testing](#manual-testing)
+## CONTENT
+
+- [Testing overview & environment](#testing-overview--environment)
+    - [Test environment](#test-environment)
+    - [Browser compatibility](#browser-compatibility)
+    - [Responsiveness](#responsiveness)
+- [Automated Testing](#automated-testing)
+- [Code Validation](#code-validation)
+- [Lighthouse](#lighthouse)
+- [Manual test](#manual-test)
+    - [Function Test](#function-test)
+- [ISSUES](#issues)
+    - [Solved Issues](#solved-issues)
+    - [Unsolved issue](#unsolved-issue)
+    - [Known issue](#known-issue)
 
 ## Automated Testing
 
