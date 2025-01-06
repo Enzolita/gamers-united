@@ -113,17 +113,13 @@ This procedure was repeated for each authenticated page.
 
 ![x](docs/testing/validate-login.png)
 
-#### Book Details
-
-![x](/documentation/images/testing/validate-book-details.png)
-
 #### Edit Post
 
 ![x](docs/testing/validate-edit-post.png)
 
 #### Confirm Delete
 
-![x](docs/testing/validate-delete-post.png)
+![x](docs/testing/confirm-delete-lighthouse.png)
 
 #### Log Out
 
@@ -132,14 +128,6 @@ This procedure was repeated for each authenticated page.
 #### Reset Password
 
 ![x](docs/testing/validate-reset-pw.png)
-
-#### Change Password
-
-![x](/documentation/images/testing/validate-change-pw.png)
-
-#### Password reset done
-
-![x](/documentation/images/testing/validate-pw-reset-done.png)
 
 
 *<span style="color: blue;">[Back to Content](#content)</span>*
@@ -157,6 +145,7 @@ This procedure was repeated for each authenticated page.
 The recommended [CI Python Linter](https://pep8ci.herokuapp.com) was to validate all Python files.
 
 ![x](docs/testing/pep8.png)
+
 </details>
 
 <br>
@@ -233,9 +222,33 @@ Lighthouse was measured on Desktop.
             <tr>
                 <td>Home Navigation</td>
                 <td>
-                    1. Click on the <em>Home</em> text.<br>
+                    1. Click on the <em>Home</em> link.</em>.<br>
                 </td>
                 <td>User is redirected to the homepage (index.html).</td>
+                <td>[Same as Expected]</td>
+                <td>&#10003;</td>
+            </tr>
+            <td>About Us Navigation</td>
+                <td>
+                    1. Click on the <em>About Us</em> link.</em>.<br>
+                </td>
+                <td>User is redirected to the about us page (about.html).</td>
+                <td>[Same as Expected]</td>
+                <td>&#10003;</td>
+            </tr>
+            <td>Posts Navigation</td>
+                <td>
+                    1. Click on the <em>Posts</em> link.</em>.<br>
+                </td>
+                <td>User is redirected to the posts page (posts.html).</td>
+                <td>[Same as Expected]</td>
+                <td>&#10003;</td>
+            </tr>
+            <td>Add Post Navigation</td>
+                <td>
+                    1. Click on the <em>Add post</em> link.</em>.<br>
+                </td>
+                <td>User is redirected to the add post page (add_post.html).</td>
                 <td>[Same as Expected]</td>
                 <td>&#10003;</td>
             </tr>
@@ -249,9 +262,9 @@ Lighthouse was measured on Desktop.
                 <td>&#10003;</td>
             </tr>
             <tr>
-                <td>Sign up Navigation</td>
+                <td>Sign Up Navigation</td>
                 <td>
-                    1. Click on the <em>Sign up</em> link.
+                    1. Click on the <em>Sign Up</em> link.
                 </td>
                 <td>User is redirected to the register page (signup.html).</td>
                 <td>[Same as Expected]</td>
@@ -278,10 +291,12 @@ Lighthouse was measured on Desktop.
             <tr>
                 <td>Footer Links</td>
                 <td>
-                    1. Click on the <em>My LinkedIn</em> link.<br>
-                    2. Click on the <em>My GitHub</em> link.
+                    1. Click on the <em>Twitch</em> link.<br>
+                    2. Click on the <em>Instagram</em> link.<br>
+                    3. Click on the <em>Twitter</em> link.<br>
+                    4. Click on the <em>Youtube</em> link.<br>
                 </td>
-                <td>User is redirected to LinkedIn and GitHub pages in new tabs.</td>
+                <td>User is redirected to Twitch, Instagram, Twitter, Youtube pages in new tabs.</td>
                 <td>[Same as Expected]</td>
                 <td>&#10003;</td>
             </tr>
@@ -305,54 +320,72 @@ Lighthouse was measured on Desktop.
     </thead>
     <tbody>
       <tr>
-        <td>Home</td>
+        <td>Join Now Button</td>
         <td>
-          1. Navigate to the home page.<br>
+          1. Navigate to the home page. <br>
+          2. Click Join Now button
         </td>
-        <td>User is redirected to the menu page.</td>
+        <td><em>User is redirected to Sign Up page</em>.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
       <tr>
-        <td>Join Now</td>
-        <td>
-          1. Navigate to the home page.<br>
-          2. Click on the <em>See specials</em> button on the "Weekend Special" slide.
-        </td>
-        <td>User is redirected to the events page.</td>
-        <td>[Same as Expected]</td>
-        <td>&#10003;</td>
-      </tr>
-      <tr>
-        <td>Happy Hour Carousel</td>
-        <td>
-          1. Navigate to the home page.<br>
-          2. Click on the <em>Join us</em> button on the "Happy Hour" slide.
-        </td>
-        <td>User is redirected to the happy hour details page.</td>
-        <td>[Same as Expected]</td>
-        <td>&#10003;</td>
-      </tr>
-      <tr>
-        <td>Welcome Title Visibility</td>
+        <td>Footer Visibility</td>
         <td>
           1. Navigate to the home page.
         </td>
-        <td><strong><em>Welcome to the Rum Away Bar</em></strong> is visible.</td>
+        <td>Footer with a purple background and white icons is visible.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
+    </tbody>
+  </table>
+</details>
+
+<br>
+
+<details>
+  <summary><strong>About Us Page</strong></summary>
+
+  <table>
+    <thead>
       <tr>
-        <td>View Our Menu Button</td>
+        <th>Test Name</th>
+        <th>Steps</th>
+        <th>Expected Result</th>
+        <th>Actual Result</th>
+        <th>Pass/Fail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>About Us Page unauthenticated</td>
         <td>
-          1. Navigate to the home page.<br>
-          2. Click on the <em>view our menu</em> button.
+          1. Click on the About Us Page.
         </td>
-        <td>User is redirected to the menu page.</td>
+        <td>A informative about us text and a "Join Now" button is visible for non-registered users</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
-      
+      <td>About Us Page authenticated</td>
+        <td>
+          1. Click on the About Us Page.
+        </td>
+        <td>A informative about us text <strong>without</strong> the ''Join Now'' button for authenticated users.</td>
+        <td>[Same as Expected]</td>
+        <td>&#10003;</td>
+      </tr>
+      <td>Join Now Button</td>
+        <td>
+          1. Click on the About Us Page.<br>
+          2. Click on the "Join Now" button visible for <strong>unauthenticated users</strong>.
+        </td>
+        <td>The user gets redirected to the Sign Up page.</td>
+        <td>[Same as Expected]</td>
+        <td>&#10003;</td>
+      </tr>
+    </tbody>
+  </table>
 </details>
 
 <br>
@@ -378,7 +411,7 @@ Lighthouse was measured on Desktop.
           2. Enter valid credentials.<br>
           3. Submit the form.
         </td>
-        <td>User is redirected to homepage with 'Successfully signed up as (username)'.</td>
+        <td>User is redirected to homepage with 'Successfully signed in as (username)'.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
@@ -444,15 +477,6 @@ Lighthouse was measured on Desktop.
         <td>&#10003;</td>
       </tr>
       <tr>
-        <td>Show/Hide Password Toggle</td>
-        <td>
-          1. Click on the show/hide password icon.<br>
-          2. Verify that the password visibility toggles between hidden and visible.
-        </td>
-        <td>Password visibility toggles as expected.</td>
-        <td>[Same as Expected]</td>
-        <td>&#10003;</td>
-      </tr>
     </tbody>
   </table>
   
@@ -461,7 +485,7 @@ Lighthouse was measured on Desktop.
 <br>
 
 <details>
-  <summary><strong>Sign In</strong></summary>
+  <summary><strong>Log In</strong></summary>
 
   <table>
     <thead>
@@ -475,13 +499,13 @@ Lighthouse was measured on Desktop.
     </thead>
     <tbody>
       <tr>
-        <td>Navigate to Sign-Up Page</td>
+        <td>Navigate to Sign-In Page</td>
         <td>
           1. Navigate to Sign-In page.<br>
-          2. Click on 'sign up' link.<br>
-          3. Go to the Sign-Up page.
+          2. Click on 'sign in' link.<br>
+          3. Go to the Sign-In page.
         </td>
-        <td>User is redirected to the Sign-Up page.</td>
+        <td>User is redirected to the Sign-In page.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
@@ -543,9 +567,37 @@ Lighthouse was measured on Desktop.
     </tbody>
   </table>
 
-   <div style="text-align: center;">
-    <img src="images_documentation/gifs/login_gif.gif" alt="Sign in gif" style="max-width: 85%; height: auto;">
-  </div> 
+</details>
+
+<br>
+
+<details>
+  <summary><strong>Log Out</strong></summary>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Test Name</th>
+        <th>Steps</th>
+        <th>Expected Result</th>
+        <th>Actual Result</th>
+        <th>Pass/Fail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Navigate to Log out Page</td>
+        <td>
+          1. Navigate to Log out page.<br>
+          2. Click on 'sign out' button.<br>
+        </td>
+        <td>User is redirected to the homepage with a text 'You have signed out.'.</td>
+        <td>[Same as Expected]</td>
+        <td>&#10003;</td>
+      </tr>
+    </tbody>
+  </table>
+
 </details>
 
 <br>
@@ -578,51 +630,7 @@ Lighthouse was measured on Desktop.
         <td>
           1. Navigate to the profile page.
         </td>
-        <td>Username, first name, last name, email, bio, and member since date are visible.</td>
-        <td>[Same as Expected]</td>
-        <td>&#10003;</td>
-      </tr>
-      <tr>
-        <td>Update First Name</td>
-        <td>
-          1. Navigate to the profile page.<br>
-          2. Change the first name input.<br>
-          3. Click on <em>Save Changes</em>.
-        </td>
-        <td>First name is updated successfully.</td>
-        <td>[Same as Expected]</td>
-        <td>&#10003;</td>
-      </tr>
-      <tr>
-        <td>Update Last Name</td>
-        <td>
-          1. Navigate to the profile page.<br>
-          2. Change the last name input.<br>
-          3. Click on <em>Save Changes</em>.
-        </td>
-        <td>Last name is updated successfully.</td>
-        <td>[Same as Expected]</td>
-        <td>&#10003;</td>
-      </tr>
-      <tr>
-        <td>Update Email</td>
-        <td>
-          1. Navigate to the profile page.<br>
-          2. Enter a valid email.<br>
-          3. Click on <em>Save Changes</em>.
-        </td>
-        <td>Email is updated successfully.</td>
-        <td>[Same as Expected]</td>
-        <td>&#10003;</td>
-      </tr>
-      <tr>
-        <td>Invalid Email Error Message</td>
-        <td>
-          1. Navigate to the profile page.<br>
-          2. Enter an invalid email.<br>
-          3. Click on <em>Save Changes</em>.
-        </td>
-        <td>Error message is displayed for invalid email.</td>
+        <td>Username, bio, total posts, country, and joined date are visible.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
@@ -630,21 +638,20 @@ Lighthouse was measured on Desktop.
         <td>Profile Image Upload</td>
         <td>
           1. Navigate to the profile page.<br>
-          2. Upload a valid profile image (PNG, JPG, JPEG, GIF, WEBP) under 8MB.<br>
-          3. Click on <em>Save Changes</em>.
+          2. Upload a valid profile image (PNG).<br>
+          3. Click on <em>Edit</em>.
         </td>
         <td>Profile image is uploaded successfully.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
-      <tr>
-        <td>Invalid Profile Image Error Message</td>
+       <tr>
+        <td>My Posts on profile page</td>
         <td>
-          1. Navigate to the profile page.<br>
-          2. Upload an invalid profile image format or exceed the 8MB size limit.<br>
-          3. Click on <em>Save Changes</em>.
+          1. Navigate to the profile page. <br>
+          2. Click on the desired post if there is any that exists.
         </td>
-        <td>Error message is displayed for invalid image format or size.</td>
+        <td>User is redirected to the post detail page.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
@@ -652,32 +659,138 @@ Lighthouse was measured on Desktop.
         <td>Bio Character Limit</td>
         <td>
           1. Navigate to the profile page.<br>
-          2. Enter a bio exceeding 50 characters.<br>
-          3. Click on <em>Save Changes</em>.
+          2. Enter a bio exceeding 150 characters.<br>
+          3. Click on <em>Edit</em>.
         </td>
-        <td>Error message is displayed for exceeding bio character limit.</td>
+        <td>User can't type more letters after exceeding bio character limit.</td>
+        <td>[Same as Expected]</td>
+        <td>&#10003;</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</details>
+
+<br>
+
+<details>
+  <summary><strong>Posts Page</strong></summary>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Test Name</th>
+        <th>Steps</th>
+        <th>Expected Result</th>
+        <th>Actual Result</th>
+        <th>Pass/Fail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Game Category Dropdown Menu Functionality</td>
+        <td>
+          1. Click on the dropdown to select a game category.<br>
+          2. Click on it again or click outside of the dropdown to close it.<br>
+          3. Press the <strong>Esc</strong> key.
+        </td>
+        <td>The game category dropdown closes.</td>
+        <td>[Same as Expected]</td>
+        <td>&#10003;</td>
+      </tr>
+      <td>Sort Game Category Selection</td>
+        <td>
+          1. Click on the dropdown to select a game category.<br>
+          2. Choose one game category.<br>
+          <td>Shows the chosen game category for the reliable post</td>
+        </td>
+      <tr>
+        <td>Navigation to each post</td>
+        <td>
+          1. Click on a post card.<br>
+          2. Get redirected to the post detail page.<br>
+          3. In the post detail page, the owner of the post can edit and delete a post <br>
+          and their own comment.
+        </td>
+        <td>Returns to the category modal displaying the selected drinks.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
       <tr>
-        <td>Testimonials Section Visibility</td>
+      <tr>
+        <td>Image Placeholder for Missing Post Images</td>
         <td>
-          1. Navigate to the profile page.
+          1. Upload a post without an image.
         </td>
-        <td>If no testimonials exist, display message: "No testimonials yet. Share your experiences to inspire others!"</td>
+        <td>A placeholder text with ''no image available'' in the post card display.</td>
+        <td>[Same as Expected]</td>
+        <td>&#10003;</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<br>
+
+<details>
+  <summary><strong>Add Post Page</strong></summary>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Test Name</th>
+        <th>Steps</th>
+        <th>Expected Result</th>
+        <th>Actual Result</th>
+        <th>Pass/Fail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Game Category Dropdown Menu Functionality</td>
+        <td>
+          1. Click on the dropdown to select a game category.<br>
+          2. Click on it again or click outside of the dropdown to close it.<br>
+          3. Press the <strong>Esc</strong> key.
+        </td>
+        <td>The game category dropdown closes.</td>
+        <td>[Same as Expected]</td>
+        <td>&#10003;</td>
+      </tr>
+      <td>Sort Game Category Selection</td>
+        <td>
+          1. Click on the dropdown to select a game category.<br>
+          2. Choose one game category.<br>
+          <td>Shows the chosen game category for the reliable post</td>
+        </td>
+      <tr>
+        <td>Navigation to each post</td>
+        <td>
+          1. Click on a post card.<br>
+          2. Get redirected to the post detail page.<br>
+          3. In the post detail page, the owner of the post can edit and delete a post <br>
+          and their own comment.
+        </td>
+        <td>Returns to the category modal displaying the selected drinks.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
       <tr>
-        <td>Edit Testimonial Button</td>
+      <tr>
+        <td>Image Placeholder for Missing Post Images</td>
         <td>
-          1. Navigate to the profile page.<br>
-          2. Click on the <em>Edit</em> button for a submitted testimonial.
+          1. Upload a post without an image.
         </td>
-        <td>User is redirected to the edit testimonial page.</td>
+        <td>A placeholder text with ''no image available'' in the post card display.</td>
         <td>[Same as Expected]</td>
         <td>&#10003;</td>
       </tr>
+    </tbody>
+  </table>
+</details>
+
+*<span style="color: blue;">[Back to Content](#content)</span>*
+
 ## ISSUES
 
 ### Solved Issues
