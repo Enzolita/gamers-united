@@ -55,7 +55,7 @@ App is fully responsive on breakpoints supported by Bootstrap 5.3.3.
 
 ## Automated Testing
 
-- **HTML Validation**: Used the [W3C HTML Validator](https://validator.w3.org/) which returned the following results:
+- **HTML Validation**: Used the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgamers-united-63fd4bb05519.herokuapp.com%2F) which returned the following results:
   <div style="text-align: center; margin: 10px 0;">
       <img src="images_documentation/lighthouse_scores/html_validator.png" alt="HTML Validator Results" style="max-width: 50%; height: auto;">
   </div>
@@ -67,46 +67,102 @@ App is fully responsive on breakpoints supported by Bootstrap 5.3.3.
 
 - **JavaScript Validation**: Used [JSHint](https://jshint.com/) to validate JavaScript code. The validation process returned a clean report compliant with ES6+ standards.
 
-### Lighthouse scores
+*<span style="color: blue;">[Back to Content](#content)</span>*
 
-Lighthouse metrics were scored on Incognito Chrome
+## Code Validation
 
-<div style="text-align: center;">
-    <img src="docs/readme_images/home_lighthouse.png" alt="Home Page Lighthouse Score" style="max-width: 85%; height: auto; margin: 0 10px;">
-    <img src="docs/readme_images/about_lighthouse.png" alt="About Page Lighthouse Score" style="max-width: 85%; height: auto; margin: 0 10px;">
-    <img src="docs/readme_images/posts_lighthouse.png" alt="Posts Page Lighthouse Score" style="max-width: 85%; height: auto; margin: 0 10px;">
-    <img src="docs/readme_images/post_detail_lighthouse.png" alt="Post Detail Page Lighthouse Score" style="max-width: 85%; height: auto; margin: 0 10px;">
-    <img src="docs/readme_images/add_post_lighthouse.png" alt="Add Post Lighthouse Score" style="max-width: 85%; height: auto; margin: 0 10px;">
-    <img src="docs/readme_images/profile_page_lighthouse.png" alt="Profile Page Lighthouse Score" style="max-width: 85%; height: auto; margin: 0 10px;">
-</div>
+### HTML
 
-- **Jest**: A JavaScript testing framework used for unit and integration tests.
-- **Django Test Framework**: The built-in testing framework for Django applications.
+All HTML files were validated using the recommended [HTML W3C Validator](https://validator.w3.org).
 
-### Running Tests
+Exceptions:
 
-Make sure to include the correct versions for both JavaScript & Django testing.
+The presence of Jinja templates in the code, which include syntax like {% for loops %}, {% url 'home' %}, and {{ variable|filter }}, means that direct copy-pasting from source files does not validate correctly.
 
-JavaScript -> `package.json`
+Normally, the [validate by URI method](https://validator.w3.org/#validate_by_uri) on deployed Heroku pages is suggested. However, this approach is impractical for my project because most pages require user login, and the W3C HTML Validator cannot access these authenticated pages.
 
-Django -> `requirements.txt`
+**Alternative Validation Approach:**
 
-On the terminal write the commands below:
+To validate HTML pages that incorporate Jinja syntax and require authentication, I followed these steps:
 
-```bash
-# For javascript
-npm test
+Navigate to the authenticated pages on the deployed site.
+Right-click on the page and select View Page Source (shortcut CTRL+U or ⌘+U on Mac).
+This reveals the fully rendered HTML, free of Jinja syntax.
+Copy this HTML and paste it into the validate by input section of the W3C validator.
+This procedure was repeated for each authenticated page.
 
-# For Django
-python3 manage.py test
-```
 
-- **JavaScript Testing**: The JavaScript tests returned the following results:
-  <div style="text-align: center; margin: 10px 0;">
-      <img src="images_documentation/lighthouse_scores/js_tests.png" alt="JavaScript Tests Results" style="max-width: 50%; height: auto; margin: 0 10px;">
-  </div>
+<details id="Validation Images">
+<summary style="font-size: 1.2em; font-weight: bold;">Validation Images</summary>
 
-- **Django Testing**: The Django tests for the application returned the following results:
+<br>
+
+#### Landing non authenticated
+
+![x](docs/testing/validate-landing.png)
+
+#### About us
+
+![x](docs/testing/validate-about.png)
+
+#### Sign Up
+
+![x](docs/testing/signup-lighthouse.png)
+
+#### Log In
+
+![x](docs/testing/validate-login.png)
+
+#### Book Details
+
+![x](/documentation/images/testing/validate-book-details.png)
+
+#### Edit Post
+
+![x](docs/testing/validate-edit-post.png)
+
+#### Confirm Delete
+
+![x](docs/testing/validate-delete-post.png)
+
+#### Log Out
+
+![x](docs/testing/validate-logout.png)
+
+#### Reset Password
+
+![x](docs/testing/validate-reset-pw.png)
+
+#### Change Password
+
+![x](/documentation/images/testing/validate-change-pw.png)
+
+#### Password reset done
+
+![x](/documentation/images/testing/validate-pw-reset-done.png)
+
+
+*<span style="color: blue;">[Back to Content](#content)</span>*
+
+### CSS
+
+[CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) was used to to validate the CSS file(s).
+
+![x](docs/testing/validate-css.png)
+
+![x](docs/testing/validate-css-warning.png)
+
+### Python
+
+The recommended [CI Python Linter](https://pep8ci.herokuapp.com) was to validate all Python files.
+
+![x](docs/testing/pep8.png)
+
+</details>
+
+<br>
+
+*<span style="color: blue;">[Back to Content](#content)</span>*
 
 
 ## Manual Testing
