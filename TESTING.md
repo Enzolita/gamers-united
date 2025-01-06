@@ -157,6 +157,56 @@ This procedure was repeated for each authenticated page.
 The recommended [CI Python Linter](https://pep8ci.herokuapp.com) was to validate all Python files.
 
 ![x](docs/testing/pep8.png)
+</details>
+
+<br>
+
+*<span style="color: blue;">[Back to Content](#content)</span>*
+
+## Lighthouse
+
+<details id="Lighthouse-desktop">
+<summary style="font-size: 1.2em; font-weight: bold;">Lighthouse Desktop</summary>
+
+<br>
+
+Lighthouse was measured on Desktop.
+
+### Landing non authenticated
+
+![x](docs/testing/home_lighthouse.png)
+
+#### Abous Us
+
+![x](docs/testing/about_lighthouse.png)
+
+### Sign Up
+
+![x](docs/testing/signup-lighthouse.png)
+
+### Log In
+
+![x](docs/testing/login-lighthouse.png)
+
+### Profile
+
+![x](docs/testing/profile-lighthouse.png)
+
+### Post Details
+
+![x](docs/testing/post_detail_lighthouse.png)
+
+### Add Post
+
+![x](docs/testing/add_post_lighthouse.png)
+
+### Confirm Delete
+
+![x](docs/testing/confirm-delete-lighthouse.png)
+
+### Log Out
+
+![x](docs/testing/logout-lighthouse.png)
 
 </details>
 
