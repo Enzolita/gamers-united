@@ -13,7 +13,6 @@ Return back to the [README.md](README.md) file.
 - [Code Validation](#code-validation)
 - [Lighthouse](#lighthouse)
 - [Manual test](#manual-test)
-    - [Function Test](#function-test)
 - [ISSUES](#issues)
     - [Solved Issues](#solved-issues)
     - [Unsolved issue](#unsolved-issue)
@@ -107,19 +106,35 @@ This procedure was repeated for each authenticated page.
 
 #### Sign Up
 
-![x](docs/testing/signup-lighthouse.png)
+![x](docs/testing/validate-signup.png)
 
 #### Log In
 
 ![x](docs/testing/validate-login.png)
 
+#### Profle Page
+
+![x](docs/testing/validate-profile.png)
+
+#### Add Post
+
+![x](docs/testing/validate-add-post.png)
+
 #### Edit Post
 
 ![x](docs/testing/validate-edit-post.png)
 
+#### Posts Page
+
+![x](docs/testing/validate-posts.png)
+
+#### Post Detail
+
+![x](docs/testing/validate-post-detail.png)
+
 #### Confirm Delete
 
-![x](docs/testing/confirm-delete-lighthouse.png)
+![x](docs/testing/validate-delete-post.png)
 
 #### Log Out
 
@@ -129,6 +144,8 @@ This procedure was repeated for each authenticated page.
 
 ![x](docs/testing/validate-reset-pw.png)
 
+I had to validate the post detail page differently due to needing to be logged in to view them.
+
 
 *<span style="color: blue;">[Back to Content](#content)</span>*
 
@@ -137,8 +154,6 @@ This procedure was repeated for each authenticated page.
 [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) was used to to validate the CSS file(s).
 
 ![x](docs/testing/validate-css.png)
-
-![x](docs/testing/validate-css-warning.png)
 
 ### Python
 
@@ -188,6 +203,10 @@ Lighthouse was measured on Desktop.
 ### Add Post
 
 ![x](docs/testing/add_post_lighthouse.png)
+
+### Posts Page
+
+![x](docs/testing/posts_lighthouse.png)
 
 ### Confirm Delete
 

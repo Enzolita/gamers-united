@@ -380,7 +380,7 @@ Bugs uncovered during development are documented as GitHub issues, offering insi
 - **Must-Have:** -
 - **Should-Have:** -
 - **Could-Have:** -
-- **Wont-Have:** -
+- **CRUD:** -
 - **Task:** -
 
 For a comprehensive view of the project's trajectory, user stories, and bug tracking, explore the [Kanban board](-).
