@@ -56,12 +56,12 @@ App is fully responsive on breakpoints supported by Bootstrap 5.3.3.
 
 - **HTML Validation**: Used the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgamers-united-63fd4bb05519.herokuapp.com%2F) which returned the following results:
   <div style="text-align: center; margin: 10px 0;">
-      <img src="images_documentation/lighthouse_scores/html_validator.png" alt="HTML Validator Results" style="max-width: 50%; height: auto;">
+      <img src="docs/testing/validate-landing.png" alt="HTML Validator Results" style="max-width: 50%; height: auto;">
   </div>
 
 - **CSS Validation**: Used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) which returned the following results:
   <div style="text-align: center; margin: 10px 0;">
-      <img src="images_documentation/lighthouse_scores/css_validator.png" alt="CSS Validator Results" style="max-width: 50%; height: auto;">
+      <img src="docs/testing/validate-css.png" alt="CSS Validator Results" style="max-width: 50%; height: auto;">
   </div>
 
 - **JavaScript Validation**: Used [JSHint](https://jshint.com/) to validate JavaScript code. The validation process returned a clean report compliant with ES6+ standards.
